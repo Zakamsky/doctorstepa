@@ -4,6 +4,10 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const posthtml = require('gulp-posthtml');
+const include = require('posthtml-include');
+const htmlnano = require('gulp-htmlnano');
+
 const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
@@ -20,15 +24,25 @@ const styles = () => {
             autoprefixer()
         ]))
         .pipe(csso())
-        .pipe(rename("styles.min.css"))
+        .pipe(rename("style.min.css"))
         .pipe(sourcemap.write("."))
         .pipe(gulp.dest("./build/css"))
         .pipe(sync.stream());
 }
 exports.styles = styles;
 // HTML
+const htmlnanoOptions = {
+
+    collapseWhitespace: "conservative",
+    // collapseAttributeWhitespace: true,
+    removeComments: "safe"
+};
 const html = () => {
     return gulp.src("source/*.html")
+        .pipe(posthtml([
+            include(),
+            ]))
+        // .pipe(htmlnano(htmlnanoOptions))
         .pipe(gulp.dest("./build"))
         .pipe(sync.stream());
 }
@@ -85,12 +99,13 @@ exports.server = server;
 // Watcher
 const watcher = () => {
     gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-    gulp.watch("source/*.html", gulp.series(html));
+    gulp.watch("source/**/*.html", gulp.series(html));
 }
 // Build
 const build = gulp.series(clean, copy, styles, images, sprite, html);
 exports.build = build;
 // Start
-exports.start = gulp.series(build, server, watcher);
-
+// exports.start = gulp.series(build, server, watcher);
+const start = gulp.series(build, server, watcher);
+exports.default = start;
 
