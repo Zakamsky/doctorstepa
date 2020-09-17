@@ -12,6 +12,7 @@ const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 // Styles
@@ -28,7 +29,7 @@ const styles = () => {
         .pipe(sourcemap.write("."))
         .pipe(gulp.dest("./build/css"))
         .pipe(sync.stream());
-}
+};
 exports.styles = styles;
 // HTML
 const htmlnanoOptions = {
@@ -45,8 +46,16 @@ const html = () => {
         // .pipe(htmlnano(htmlnanoOptions))
         .pipe(gulp.dest("./build"))
         .pipe(sync.stream());
-}
+};
 exports.html = html;
+
+//webp
+const webpPics = () => {
+    return gulp.src("source/img/**/*.{png,jpg}")
+        .pipe(webp({quality: 90}))
+        .pipe(gulp.dest("source/img"))
+};
+exports.webp = webpPics;
 //Imagemin
 const images = () => {
     return gulp.src("source/img/**/*.{jpg,png,svg}")
@@ -56,7 +65,7 @@ const images = () => {
             imagemin.svgo()
         ]))
         .pipe(gulp.dest('./build/img'));
-}
+};
 exports.images = images;
 // Sprite
 const sprite = () => {
@@ -64,7 +73,8 @@ const sprite = () => {
         .pipe(svgstore())
         .pipe(rename("sprite.svg"))
         .pipe(gulp.dest("build/img"));
-}
+};
+
 exports.sprite = sprite;
 // Copy
 const copy = () => {

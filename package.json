@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "browser-sync": "^2.26.12",
@@ -19,12 +21,14 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1",
     "posthtml-include": "^1.4.3"
   },
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webp": "gulp webp"
   },
   "repository": {
     "type": "git",
