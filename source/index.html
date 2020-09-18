@@ -6,9 +6,47 @@
 </include>
 <main class="page__content">
  <div class="container">
+  <section class="promo">
+   <div class="row">
+    <div class="col-lg-9">
+     <include src="source/inc/blocks/top-banner.html"></include>
+    </div>
+    <div class="col-lg-3">
+     <include src="source/inc/blocks/narrow-banner.html"></include>
+    </div>
+   </div>
+   <div class="col-12 features">
+    <include src="source/inc/blocks/features.html"></include
+   </div>
 
-
-
+  </section>
+  <section class="featured-products">
+   <include src="source/inc/blocks/products-slider.html"
+            locals='{
+            "title": "Более 20 брендов в наличии"
+        }'></include>
+  </section>
+  <section class="featured-products">
+   <include src="source/inc/blocks/products-slider.html"
+            locals='{
+            "title": "Модная медицинская одежда"
+        }'></include>
+  </section>
+  <section class="featured-products">
+   <include src="source/inc/blocks/products-slider.html"
+            locals='{
+            "title": "Дешевая медицинская одежда"
+        }'></include>
+  </section>
+  <section class="pop-categories">
+   <include src="source/inc/blocks/categories.html"
+            locals='{
+            "title": "Популярные категории"
+        }'></include>
+  </section>
+  <section class="bottom-banner">
+   <include src="source/inc/blocks/wide-banner.html"></include>
+  </section>
  </div>
 </main>
 <include src="source/inc/global/footer.html" ></include>
