@@ -76,7 +76,18 @@
         </nav>
         <div class="middle-bar">
             <div class="brand">
-                <picture class="brand__logo"></picture>
+
+                <include src="source/inc/utils/picture.html"
+                         locals='{
+                        "name": "mzl3",
+                        "ext": "png",
+                        "width": "175",
+                        "height": "51",
+                        "class": "brand__logo",
+                        "alt": "logo"
+                    }'>
+                </include>
+
                 <p class="brand__slogan">
                     Медицинская одежда с доставкой по Москве и Московской обл.
                 </p>

@@ -1,0 +1,23 @@
+<picture>
+    <source type="image/webp" media="(min-width: 1200px)"
+            srcset="img/{{ name }}-lg.webp 1x,
+                    img/{{ name }}-lg@2x.webp 2x">
+
+<!--    <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/{{ name }}-md.webp 1x,
+                    img/{{ name }}-md@2x.webp 2x">-->
+
+    <source type="image/webp" srcset="img/{{ name }}.webp 1x,
+                    img/{{ name }}@2x.webp 2x">
+
+    <source media="(min-width: 1200px)"
+            srcset="img/{{ name }}-lg.{{ ext }} 1x,
+                    img/{{ name }}-lg@2x.{{ ext }} 2x">
+
+<!--    <source media="(min-width: 768px)"
+            srcset="img/{{ name }}-md.{{ ext }} 1x,
+                    img/{{ name }}-md@2x.{{ ext }} 2x">-->
+
+    <img class="{{ class }}" srcset="img/{{ name }}@2x.{{ ext }} 2x" src="img/{{ name }}.{{ ext }}" width="{{ width }}" height="{{ height }}" alt="{{ alt }}"/>
+
+</picture>
