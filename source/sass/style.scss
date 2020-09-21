@@ -2,13 +2,22 @@
 // --variables:
 @import "my-vars";
 // --mixins:
-
+@import "mixins/media-mixin";
+@import "mixins/fonts";
 //general:
 // (bootstrap included its own vars and mixins)
+@import "fonts";
 @import "bootstrap";
+@import "utilities";
 
-
+//styles for pages and global includes:
+@import "page";
+@import "header";
+@import "footer";
 //styles for BEM blocks:
+@import "blocks/top-bar";
+@import "blocks/middle-bar";
+@import "blocks/bottom-bar";
 
 //general custom styles:
 
