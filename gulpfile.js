@@ -99,7 +99,7 @@ exports.sprite = sprite;
 // Copy
 const copy = () => {
     return gulp.src([
-        "source/fonts/**/*.{woff,woff2}",
+        "source/fonts/**/*.{woff,woff2,ttf}",
         "source/js/**",
         "source/*.ico"
     ], {

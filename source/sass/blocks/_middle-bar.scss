@@ -1,0 +1,18 @@
+.middle-bar{
+  display: block;
+  &__wrapper{
+    display: flex;
+  }
+}
+
+@include media(lg){
+  .middle-bar{
+    display: flex;
+  }
+}
+
+// === brand ===
+
+.brand{
+  display: flex;
+}
