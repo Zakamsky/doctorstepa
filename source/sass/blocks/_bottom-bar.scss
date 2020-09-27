@@ -1,0 +1,30 @@
+
+.main-menu{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin-left: -10px;
+  margin-right: -10px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  &__item+&__item{
+    margin-left: 30px;
+    @include media(lg){
+      margin-left: auto;
+    }
+  }
+  &__link{
+    padding: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    color: inherit;
+    border-radius: $radius-sm;
+    &:hover{
+      color: inherit;
+      text-decoration: underline;
+      background-color: $color-accent-light;
+    }
+  }
+}

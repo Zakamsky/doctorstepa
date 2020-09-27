@@ -13,7 +13,7 @@
         <nav class="top-bar">
             <button type="button" class="location">Москва</button>
 
-            <div class="mobile-only">
+            <div class="top-bar__address mobile-only">
                 <!-- address -->
                 <include src="source/inc/blocks/address.html"></include>
                 <!-- /address -->
@@ -49,29 +49,15 @@
                 <!-- login-link -->
             </div>
 
-            <ul class="socials mobile-only">
-                <li class="socials__item">
-                    <a href="#!" class="socials__link">
-                        <svg class="socials__icon"width="30" height="30">
+            <div class="top-bar__socials mobile-only">
+                <include src="source/inc/blocks/socials.html"
+                    locals='{
+                        "size": "25"
+                    }'>
 
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__item">
-                    <a href="#!" class="socials__link">
-                        <svg class="socials__icon"width="30" height="30">
+                </include>
+            </div>
 
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__item">
-                    <a href="#!" class="socials__link">
-                        <svg class="socials__icon"width="30" height="30">
-
-                        </svg>
-                    </a>
-                </li>
-            </ul>
 
         </nav>
         <div class="middle-bar">
@@ -120,14 +106,30 @@
         </div>
         <nav class="bottom-bar">
             <ul class="main-menu">
-                <li class="main-menu__item"><a href="#!" class="main-menu__link">menu item</a></li>
-                <li class="main-menu__item"><a href="#!" class="main-menu__link">menu item</a></li>
-                <li class="main-menu__item"><a href="#!" class="main-menu__link">menu item</a></li>
-                <li class="main-menu__item"><a href="#!" class="main-menu__link">menu item</a></li>
-                <li class="main-menu__item"><a href="#!" class="main-menu__link">menu item</a></li>
-                <li class="main-menu__item"><a href="#!" class="main-menu__link">menu item</a></li>
-                <li class="main-menu__item"><a href="#!" class="main-menu__link">menu item</a></li>
-                <li class="main-menu__item"><a href="#!" class="main-menu__link">menu item</a></li>
+                <li class="main-menu__item">
+                    <a href="#!" class="main-menu__link">Халаты</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#!" class="main-menu__link">Мед. куртки</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#!" class="main-menu__link">Брюки</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#!" class="main-menu__link">Комбинезоны</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#!" class="main-menu__link">Костюмы</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#!" class="main-menu__link">Обувь</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#!" class="main-menu__link">Шапочки</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#!" class="main-menu__link">Другое</a>
+                </li>
             </ul>
         </nav>
     </div>

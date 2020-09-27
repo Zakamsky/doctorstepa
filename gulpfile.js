@@ -131,6 +131,9 @@ const watcher = () => {
     gulp.watch("source/sass/**/*.scss", gulp.series(styles));
     gulp.watch("source/**/*.html", gulp.series(html));
 }
+// all images
+const imagesAll = gulp.series( webpPics, images);
+exports.imagesAll = imagesAll;
 // Build
 const build = gulp.series(clean, copy, styles, webpPics, images, sprite, html);
 exports.build = build;
