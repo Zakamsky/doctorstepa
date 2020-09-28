@@ -90,8 +90,12 @@ exports.images = images;
 // Sprite
 const sprite = () => {
     return gulp.src("source/img/**/icon-*.svg")
+        .pipe(imagemin([
+            imagemin.svgo()
+        ]))
         .pipe(svgstore())
         .pipe(rename("sprite.svg"))
+
         .pipe(gulp.dest("build/img"));
 };
 
