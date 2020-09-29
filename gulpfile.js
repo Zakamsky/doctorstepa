@@ -91,7 +91,11 @@ exports.images = images;
 const sprite = () => {
     return gulp.src("source/img/**/icon-*.svg")
         .pipe(imagemin([
-            imagemin.svgo()
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: false}
+                ]
+            })
         ]))
         .pipe(svgstore())
         .pipe(rename("sprite.svg"))

@@ -1,14 +1,25 @@
-
+.bottom-bar{
+  @include media-breakpoint-down(md){
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .main-menu{
+  max-width: 100vw;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   list-style: none;
   padding: 0;
-  margin-left: -10px;
-  margin-right: -10px;
   overflow-y: hidden;
   overflow-x: auto;
+  @include media(lg){
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  &__item:first-child{
+    margin-left: 5px;
+  }
   &__item+&__item{
     margin-left: 30px;
     @include media(lg){
@@ -16,14 +27,20 @@
     }
   }
   &__link{
-    padding: 10px;
-    font-size: 16px;
+    display: block;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
     white-space: nowrap;
     color: inherit;
     border-radius: $radius-sm;
+    @include media(md){
+      font-size: 16px;
+    }
     &:hover{
       color: inherit;
-      text-decoration: underline;
+      text-decoration: none;
       background-color: $color-accent-light;
     }
   }

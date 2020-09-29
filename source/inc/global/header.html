@@ -11,7 +11,12 @@
 <header class="page__header">
     <div class="container">
         <nav class="top-bar">
-            <button type="button" class="location">Москва</button>
+            <button type="button" class="location">
+                <svg width="24" height="24" fill="none">
+                    <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+                </svg>
+                Москва
+            </button>
 
             <div class="top-bar__address mobile-only">
                 <!-- address -->
@@ -43,7 +48,7 @@
                 </li>
             </ul>
 
-            <div class="desctop-only">
+            <div class="desctop-only top-bar__login">
                 <!-- login-link -->
                 <include src="source/inc/blocks/login-link.html"></include>
                 <!-- login-link -->
@@ -80,12 +85,16 @@
             </div>
             <div class="middle-bar__wrapper">
                 <button type="button" class="menu-opener mobile-only">
-                    открыть меню
+                    <svg width="28" height="28" fill="none">
+                        <use class="burger" xlink:href="img/sprite.svg#icon-burger"></use>
+                        <use class="close" xlink:href="img/sprite.svg#icon-close"></use>
+                    </svg>
+                    <span class="visually-hidden">открыть меню</span>
                 </button>
                 <!-- search -->
                     <include src="source/inc/blocks/searchform.html"></include>
                 <!-- /search -->
-                <div class="desctop-only">
+                <div class="desktop-only">
                     <!-- address -->
                     <include src="source/inc/blocks/address.html"></include>
                     <!-- /address -->
@@ -104,7 +113,10 @@
 
             </div>
         </div>
-        <nav class="bottom-bar">
+
+    </div>
+    <div class="container-lg bottom-bar">
+        <nav class="bottom-bar__wrapper">
             <ul class="main-menu">
                 <li class="main-menu__item">
                     <a href="#!" class="main-menu__link">Халаты</a>

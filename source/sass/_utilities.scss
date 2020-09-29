@@ -8,3 +8,26 @@
   width: 1px !important;
   overflow: hidden;
 }
+button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+button,
+input,
+a{
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.mobile-only{
+  @include media($switch-only){
+    display: none;
+  }
+}
+.desktop-only{
+  display: none;
+  @include media($switch-only){
+    display: block;
+  }
+}

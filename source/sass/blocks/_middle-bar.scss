@@ -3,17 +3,35 @@
   &__wrapper{
     display: flex;
     flex-wrap: wrap;
+    background-color: $color-accent-light;
   }
 }
 
 @include media(lg){
   .middle-bar{
     display: flex;
+    &__wrapper{
+      background-color: transparent;
+    }
   }
 }
-
+.menu-opener .close{
+  visibility: hidden;
+}
+.menu-opener.open .close{
+  visibility: visible;
+}
+.menu-opener.open .burger{
+  visibility: hidden;
+}
 // === brand ===
 
 .brand{
   display: flex;
+  &__slogan{
+    margin: 2px 10px 0;
+    width: 190px;
+    font-size: 12px;
+    line-height: 1.345;
+  }
 }
