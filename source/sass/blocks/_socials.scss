@@ -1,0 +1,16 @@
+
+.socials{
+  @include list-style-none;
+  display: flex;
+  &__item+&__item{
+    margin-left: 25px;
+  }
+  &__link{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: $color-accent;
+    &:hover{
+      background-color: $color-accent-hover;
+    }
+  }
+}

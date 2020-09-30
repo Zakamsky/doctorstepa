@@ -1,22 +1,47 @@
 .top-bar{
   display: none;
   @include media($switch-only){
+    display: block;
+    margin-top: 43px;
+    margin-bottom: 31px;
+
+  }
+  &__wrapper{
     display: flex;
   }
 }
-.location{
-  margin-right: auto;
-  padding: 0;
-  border: none;
-  font-weight: 500;
-  color: inherit;
-  background-color: transparent;
-  &:hover{
-    color: #808D9A;
-  }
-}
+// blocks/location.scss
+
 .secondary-menu{
   display: flex;
-  padding: 0;
-  list-style: none;
+  @include list-style-none();
+  &__item+&__item{
+    @include media(lg){
+      margin-left: 10px;
+    }
+  }
+  &__link{
+    display: block;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: nowrap;
+    color: $color-text-light;
+    border-radius: $radius-sm;
+    @include media(md){
+
+    }
+    &:hover{
+      color: $color-text;
+      text-decoration: none;
+      background-color: $color-accent-light;
+    }
+  }
 }
+.top-bar__login{
+  margin-left: 10px;
+  margin-right: -10px;
+}
+
+// blocks/login-link.scss

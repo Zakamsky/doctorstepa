@@ -9,8 +9,8 @@
 </head>
 <body class="page">
 <header class="page__header">
-    <div class="container">
-        <nav class="top-bar">
+    <div class="top-bar container">
+        <nav class="top-bar__wrapper">
             <button type="button" class="location">
                 <svg width="24" height="24" fill="none">
                     <use xlink:href="img/sprite.svg#icon-map-pin"></use>
@@ -65,11 +65,12 @@
 
 
         </nav>
-        <div class="middle-bar">
-            <div class="middle-bar__brand brand">
+    </div>
+    <div class="middle-bar container-lg">
+        <div class="middle-bar__brand brand">
 
-                <include src="source/inc/utils/picture.html"
-                         locals='{
+            <include src="source/inc/utils/picture.html"
+                     locals='{
                         "name": "mzl3",
                         "ext": "png",
                         "width": "175",
@@ -77,45 +78,44 @@
                         "class": "brand__logo",
                         "alt": "logo"
                     }'>
-                </include>
+            </include>
 
-                <p class="brand__slogan">
-                    Медицинская&nbsp;одежда с&nbsp;доставкой по Москве и&nbsp;Московской&nbsp;обл.
-                </p>
-            </div>
-            <div class="middle-bar__wrapper">
-                <button type="button" class="menu-opener mobile-only">
-                    <svg width="28" height="28" fill="none">
-                        <use class="burger" xlink:href="img/sprite.svg#icon-burger"></use>
-                        <use class="close" xlink:href="img/sprite.svg#icon-close"></use>
-                    </svg>
-                    <span class="visually-hidden">открыть меню</span>
-                </button>
-                <!-- search -->
-                    <include src="source/inc/blocks/searchform.html"></include>
-                <!-- /search -->
-                <div class="desktop-only">
-                    <!-- address -->
-                    <include src="source/inc/blocks/address.html"></include>
-                    <!-- /address -->
-                </div>
-                <div class="mobile-only">
-                    <!-- login-link -->
-                    <include src="source/inc/blocks/login-link.html"></include>
-                    <!-- login-link -->
-                </div>
-                <a href="#!" class="menu-cart-link">
-                    <span class="counter">00</span>
-                    <svg class="menu-cart-link__icon" width="45" height="45">
-                        <use></use>
-                    </svg>
-                </a>
-
-            </div>
+            <p class="brand__slogan">
+                Медицинская&nbsp;одежда с&nbsp;доставкой по Москве и&nbsp;Московской&nbsp;обл.
+            </p>
         </div>
+        <div class="middle-bar__wrapper">
+            <button type="button" class="menu-opener mobile-only">
+                <svg width="28" height="28" fill="none">
+                    <use class="burger" xlink:href="img/sprite.svg#icon-burger"></use>
+                    <use class="close" xlink:href="img/sprite.svg#icon-close"></use>
+                </svg>
+                <span class="visually-hidden">открыть меню</span>
+            </button>
+            <!-- search -->
+            <include src="source/inc/blocks/searchform.html"></include>
+            <!-- /search -->
+            <div class="desktop-only">
+                <!-- address -->
+                <include src="source/inc/blocks/address.html"></include>
+                <!-- /address -->
+            </div>
+            <div class="mobile-only">
+                <!-- login-link -->
+                <include src="source/inc/blocks/login-link.html"></include>
+                <!-- login-link -->
+            </div>
+            <a href="#!" class="menu-cart-link">
+                <svg class="menu-cart-link__icon" width="45" height="45" fill="none">
+                    <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+                <span class="visually-hidden">корзина</span>
+                <span class="menu-cart-link__counter">00<span class="visually-hidden">товаров</span></span>
+            </a>
 
+        </div>
     </div>
-    <div class="container-lg bottom-bar">
+    <div class="bottom-bar container-lg">
         <nav class="bottom-bar__wrapper">
             <ul class="main-menu">
                 <li class="main-menu__item">

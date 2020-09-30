@@ -4,6 +4,7 @@
 // --mixins:
 @import "mixins/media-mixin";
 @import "mixins/fonts";
+@import "mixins/my-myxins";
 //general:
 // (bootstrap included its own vars and mixins)
 @import "fonts";
@@ -18,6 +19,9 @@
 @import "blocks/top-bar";
 @import "blocks/middle-bar";
 @import "blocks/bottom-bar";
+@import "blocks/location";
+@import "blocks/login-link";
+@import "blocks/socials";
 
 //general custom styles:
 
