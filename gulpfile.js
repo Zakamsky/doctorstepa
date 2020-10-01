@@ -15,6 +15,7 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const uglify = require("gulp-uglify");
 const del = require("del");
 
 //fonts convert from ttf to woff and woff2
@@ -52,12 +53,24 @@ const styles = () => {
         .pipe(sync.stream());
 };
 exports.styles = styles;
+
+// minification js
+const scripts = () => {
+    return gulp.src("source/js/*.js")
+        .pipe(uglify())
+        .pipe(rename({suffix: ".min"}))
+        .pipe(gulp.dest("build/js"))
+        .pipe(sync.stream());
+};
+exports.scripts = scripts;
+
 // HTML
 const htmlnanoOptions = {
     collapseWhitespace: "conservative",
     // collapseAttributeWhitespace: true,
     removeComments: "safe"
 };
+
 const html = () => {
     return gulp.src("source/*.html")
         .pipe(posthtml([
@@ -108,7 +121,7 @@ exports.sprite = sprite;
 const copy = () => {
     return gulp.src([
         "source/fonts/**/*.{woff,woff2,ttf}",
-        "source/js/**",
+        // "source/js/**",
         "source/*.ico"
     ], {
         base: "source"
@@ -138,12 +151,13 @@ exports.server = server;
 const watcher = () => {
     gulp.watch("source/sass/**/*.scss", gulp.series(styles));
     gulp.watch("source/**/*.html", gulp.series(html));
+    gulp.watch("source/js/**/*.js", gulp.series(scripts));
 }
 // all images
 const imagesAll = gulp.series( webpPics, images);
 exports.imagesAll = imagesAll;
 // Build
-const build = gulp.series(clean, copy, styles, webpPics, images, sprite, html);
+const build = gulp.series(clean, copy, styles, scripts, webpPics, images, sprite, html);
 exports.build = build;
 // Start
 // exports.start = gulp.series(build, server, watcher);

@@ -4,15 +4,24 @@
             <use xlink:href="img/sprite.svg#icon-search"></use>
         </svg>
     </button>
-    <form action="/" method="post">
-        <select name="" id="">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+    <form class="searchform__form " action="/" method="post">
+        <select name="category" class="searchform__select js-select2" >
+            <option value="Халаты">Халаты</option>
+            <option value="Халаты">Халаты</option>
+            <option value="Брюки">Брюки</option>
+            <option value="Комбинезоны">Комбинезоны</option>
+            <option value="Костюмы">Костюмы</option>
+            <option value="Обувь">Обувь</option>
+            <option value="Шапочки">Шапочки</option>
+            <option value="Другое">Другое</option>
         </select>
-        <input type="search">
-        <button>поиск</button>
+        <input class="searchform__search-field" type="search" placeholder="Поиск товара...">
+        <button class="searchform__button">
+            <svg width="24" height="24" fill="none">
+                <use class="burger" xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
+            <span class="visually-hidden">поиск</span>
+        </button>
     </form>
+
 </div>

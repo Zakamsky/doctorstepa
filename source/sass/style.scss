@@ -9,6 +9,7 @@
 // (bootstrap included its own vars and mixins)
 @import "fonts";
 @import "bootstrap";
+@import "select2/core";
 @import "utilities";
 
 //styles for pages and global includes:
@@ -22,6 +23,8 @@
 @import "blocks/location";
 @import "blocks/login-link";
 @import "blocks/socials";
+@import "blocks/contacts";
+@import "blocks/searchform";
 
 //general custom styles:
 

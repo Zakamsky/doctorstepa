@@ -3,22 +3,29 @@
   @include media-breakpoint-down(md){
     padding: 0;
   }
+  @include media(lg){
+    display: flex;
+  }
   &__wrapper{
     display: flex;
     flex-wrap: wrap;
     background-color: $color-accent-light;
-  }
-}
-
-@include media(lg){
-  .middle-bar{
-    display: flex;
-
-    &__wrapper{
+    @include media(lg){
       background-color: transparent;
+      flex-grow: 1;
+    }
+    &>.searchform{
+      margin-top: 1px;
     }
   }
+  &__contacts{
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: 15px;
+  }
 }
+
+
 .menu-opener .close{
   visibility: hidden;
 }
@@ -48,6 +55,7 @@
   border-radius: 50%;
   color: transparent;
   @include media($switch-only){
+    align-self: center;
     color: $color-text-light;
   }
   &__counter{

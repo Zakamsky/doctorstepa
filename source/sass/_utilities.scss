@@ -18,6 +18,7 @@ input,
 a{
   font-size: inherit;
   font-family: inherit;
+  color: inherit;
 }
 
 .mobile-only{
@@ -30,4 +31,7 @@ a{
   @include media($switch-only){
     display: block;
   }
+}
+.text-main{
+  color: $color-accent;
 }
