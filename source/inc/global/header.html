@@ -9,10 +9,10 @@
 </head>
 <body class="page">
 <header class="page__header">
-    <div class="top-bar container">
+    <div class="top-bar container js-menu">
         <nav class="top-bar__wrapper">
             <button type="button" class="location">
-                <svg width="24" height="24" fill="none">
+                <svg class="location__icon" width="24" height="24" fill="none">
                     <use xlink:href="img/sprite.svg#icon-map-pin"></use>
                 </svg>
                 Москва
@@ -29,7 +29,7 @@
                     <a href="#!" class="secondary-menu__link">О магазине</a>
                 </li>
                 <li class="secondary-menu__item">
-                    <a href="#!" class="secondary-menu__link">Дисконтная программа</a>
+                    <a href="#!" class="secondary-menu__link --current">Дисконтная программа</a>
                 </li>
                 <li class="secondary-menu__item">
                     <a href="#!" class="secondary-menu__link">Оплата</a>
@@ -45,7 +45,7 @@
                 </li>
             </ul>
 
-            <div class="desctop-only top-bar__login">
+            <div class="top-bar__login d-none d-lg-block">
                 <!-- login-link -->
                 <include src="source/inc/blocks/login-link.html"></include>
                 <!-- login-link -->
@@ -56,7 +56,6 @@
                     locals='{
                         "size": "25"
                     }'>
-
                 </include>
             </div>
 
@@ -82,7 +81,7 @@
             </p>
         </div>
         <div class="middle-bar__wrapper">
-            <button type="button" class="menu-opener mobile-only">
+            <button type="button" class="menu-opener mobile-menu-btn mobile-only mr-auto js-menuopener">
                 <svg width="28" height="28" fill="none">
                     <use class="burger" xlink:href="img/sprite.svg#icon-burger"></use>
                     <use class="close" xlink:href="img/sprite.svg#icon-close"></use>
@@ -92,12 +91,12 @@
             <!-- search -->
             <include src="source/inc/blocks/searchform.html"></include>
             <!-- /search -->
-            <div class="desktop-only middle-bar__contacts">
+            <div class="middle-bar__contacts d-none d-lg-block">
                 <!-- address -->
                 <include src="source/inc/blocks/contacts.html"></include>
                 <!-- /address -->
             </div>
-            <div class="mobile-only">
+            <div class="middle-bar__login d-block d-lg-none">
                 <!-- login-link -->
                 <include src="source/inc/blocks/login-link.html"></include>
                 <!-- login-link -->

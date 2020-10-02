@@ -15,7 +15,7 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
-const uglify = require("gulp-uglify");
+const uglify = require("gulp-uglify-es").default;;
 const del = require("del");
 
 //fonts convert from ttf to woff and woff2

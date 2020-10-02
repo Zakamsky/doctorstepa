@@ -14,8 +14,9 @@
 
 //styles for pages and global includes:
 @import "page";
-@import "header";
+//@import "header"; //empty file
 @import "footer";
+
 //styles for BEM blocks:
 @import "blocks/top-bar";
 @import "blocks/middle-bar";

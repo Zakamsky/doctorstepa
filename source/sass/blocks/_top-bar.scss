@@ -4,16 +4,86 @@
     display: block;
     margin-top: 43px;
     margin-bottom: 31px;
-
+  }
+  &.open{ //mobile menu
+    @include media-breakpoint-down(md){
+      display: block;
+      position: absolute;
+      top: 134px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(#41414A, 0.6);
+      z-index: 999;
+      @include media(md){
+        top: 155px;
+      }
+      .top-bar__wrapper{
+        width: 250px;
+        height: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: $color-light;
+        .location{
+          display: block;
+          margin: 0;
+          padding: 15px 16px 16px;
+          @include menu-devider;
+          &__icon{
+            width: 20px;
+            height: 20px;
+            line-height: 20;
+          }
+        }
+        .top-bar__address{
+          margin: 0;
+          padding: 35px 16px;
+          @include menu-devider;
+          .contacts{
+            text-align: left;
+            margin: 0;
+          }
+        }
+        .secondary-menu{
+          flex-direction: column;
+          &__item{
+            padding: 2px 2px 3px;
+          }
+          &__item:not(:last-child){
+            @include menu-devider;
+          }
+          &__link{
+            padding: 16px 14px;
+            border-radius: 20px;
+            &.--current{
+              background: rgba(242, 170, 7, 0.2);
+            }
+          }
+        }
+        .top-bar__socials{
+          padding: 10px 16px;
+        }
+      }
+    }
   }
   &__wrapper{
     display: flex;
+    align-items: center;
   }
 }
 // blocks/location.scss
 
 .secondary-menu{
   display: flex;
+  margin-bottom: 0;
+  @include media(lg){
+    margin-left: 10px;
+  }
   @include list-style-none();
   &__item+&__item{
     @include media(lg){
@@ -29,9 +99,7 @@
     white-space: nowrap;
     color: $color-text-light;
     border-radius: $radius-sm;
-    @include media(md){
-
-    }
+    &.--current,
     &:hover{
       color: $color-text;
       text-decoration: none;

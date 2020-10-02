@@ -11,4 +11,14 @@ html{
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   overflow-x: hidden;
+  &.fixed{
+    @include media-breakpoint-down(md){
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+  &__content{
+    background-color: rgba(242, 242, 242, 0.21);
+  }
 }

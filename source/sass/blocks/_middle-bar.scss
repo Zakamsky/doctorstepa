@@ -6,16 +6,38 @@
   @include media(lg){
     display: flex;
   }
+  &__brand{
+    margin-bottom: 20px;
+    @include media(md){
+
+      margin-bottom: 30px;
+    }
+  }
   &__wrapper{
     display: flex;
-    flex-wrap: wrap;
+    height: 54px;
+    align-items: center;
+    padding: 0 15px;
+    flex-wrap: wrap; //todo: ???
     background-color: $color-accent-light;
+    margin-bottom: 20px;
+    @include media(md){
+      margin-bottom: 30px;
+    }
     @include media(lg){
-      background-color: transparent;
+      height: auto;
+      padding: 0;
       flex-grow: 1;
+      background-color: transparent;
     }
     &>.searchform{
-      margin-top: 1px;
+      //margin-top: 1px;
+      @include media(md){
+        margin: 0 auto;
+      }
+      @include media(lg){
+        margin: 1px 0 0;
+      }
     }
   }
   &__contacts{
@@ -39,11 +61,28 @@
 
 .brand{
   display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  @include media(lg){
+    margin-top: 0;
+  }
+  &__logo{
+    width: 100px;
+    height: 35px;
+    @include media(md){
+      width: 175px;
+      height: 51px;
+    }
+  }
   &__slogan{
     margin: 2px 10px 0;
-    width: 190px;
-    font-size: 12px;
+    width: 124px;
+    font-size: 10px;
     line-height: 1.345;
+    @include media(md){
+      width: 190px;
+      font-size: 12px;
+    }
   }
 }
 
@@ -58,15 +97,20 @@
     align-self: center;
     color: $color-text-light;
   }
+  @include media-breakpoint-down(md){
+    &:hover{
+      color: transparent;
+    }
+  }
   &__counter{
     display: block;
     position: absolute;
-    top: -5px;
-    right: -5px;
+    top: -1px;
+    right: -1px;
     width: 20px;
     height: 20px;
     padding: 1px;
-    font-size: 10px;
+    font-size: 8px;
     line-height: 20px;
     text-align: center;
     vertical-align: middle;
@@ -74,6 +118,11 @@
     border-radius: 50%;
     color: $color-light;
     background-color: $color-accent;
-
+    @include media($switch-only){
+      top: -5px;
+      right: -5px;
+      padding: 0;
+      font-size: 10px;
+    }
   }
 }

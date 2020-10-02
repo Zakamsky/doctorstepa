@@ -35,3 +35,23 @@ a{
 .text-main{
   color: $color-accent;
 }
+
+@include media-breakpoint-down(md){
+  .mobile-menu-btn{
+    appearance: none;
+    height: 45px;
+    width: 45px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    &:active,
+    &:focus,
+    &:hover{
+      background-color: transparent !important;
+      color: inherit;
+      outline-color: $color-accent;
+    }
+  }
+}

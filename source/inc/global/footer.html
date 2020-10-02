@@ -1,25 +1,27 @@
 <footer class="page__footer footer">
-    <div class="footer__top container">
-        <div class="callback">
+    <div class="footer__wrapper container">
+        <div class="footer__callback callback">
             <h2 class="callback__title h5">Обратный звонок</h2>
-            <form action="" class="callback__form">
-                <input type="text" class="callback__input">
-                <button>
-                    <svg class="callback__icon" width="24" height="24">
-                        <use xlink:href="img/sprite.svg#phone"></use>
+            <form action="" method="post" class="callback__form">
+                <input type="text" class="callback__input" placeholder="Номер телефона...">
+                <button class="callback__submit">
+                    <svg class="callback__icon" width="24" height="24" fill="none">
+                        <use xlink:href="img/sprite.svg#icon-phone"></use>
                     </svg>
                     <span class="visually-hidden">позвоните мне</span>
                 </button>
             </form>
-            <div class="socials mobile-only">
-                <include src="source/inc/blocks/socials.html"
-                         locals='{
-                        "size": "30"
-                    }'>
-                </include>
-            </div>
+
         </div>
-        <div class="footer-nav">
+    <!--            <div class="socials mobile-only">-->
+        <div class="footer__socials socials">
+            <include src="source/inc/blocks/socials.html"
+                     locals='{
+                            "size": "30"
+                        }'>
+            </include>
+        </div>
+        <div class="footer__nav footer-nav">
             <include src="source/inc/blocks/footer-nav-block.html"
                      locals='{
                         "title": "Покупателям"
@@ -36,39 +38,40 @@
                     }'>
             </include>
         </div>
-        <div class="footer-brand">
-            <div class="brand">
+        <div class="footer__brand">
+<!--            <div class="brand">-->
                 <include src="source/inc/utils/picture.html"
                          locals='{
                         "name": "logo",
                         "ext": "png",
                         "width": "175",
                         "height": "58",
-                        "class": "brand__logo",
+                        "class": "footer__brand-logo",
                         "alt": "Доктор Стёпа, медицинская одежда"
                     }'>
                 </include>
-            </div>
-            <div class="footer-brand__address mobile-only">
-                <include src="source/inc/blocks/footer-address.html"></include>
-            </div>
+<!--            </div>-->
+
         </div>
-    </div>
-    <div class="footer__bottom">
+        <div class="footer__address">
+            <include src="source/inc/blocks/footer-address.html"></include>
+        </div>
+<!--    </div>-->
+<!--    <div class="footer__bottom">-->
 
         <button type="button" class="location mobile-only">Москва</button>
 
-        <p class="copyright">
+        <p class="footer__copyright">
             <a href="/" class="copyright_link">Доктор&nbsp;Стёпа&nbsp;©&nbsp;2020.</a> Интернет-магазин медицинской одежды
         </p>
 
-        <div class="socials desktop-only">
-            <include src="source/inc/blocks/socials.html"
-                     locals='{
-                        "size": "30"
-                    }'>
-            </include>
-        </div>
+<!--        <div class="socials desktop-only">-->
+<!--            <include src="source/inc/blocks/socials.html"-->
+<!--                     locals='{-->
+<!--                        "size": "30"-->
+<!--                    }'>-->
+<!--            </include>-->
+<!--        </div>-->
     </div>
 </footer>
 

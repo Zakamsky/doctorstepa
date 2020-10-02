@@ -7,8 +7,16 @@
   white-space: nowrap;
   color: $color-text-light;
   border-radius: $radius-sm;
-  @include media(md){
-
+  &__icon{
+    @include media(xl){
+      display: none;
+    }
+  }
+  &__text{
+    display: none;
+    @include media(xl){
+      display: inline;
+    }
   }
   &:hover{
     color: $color-text;
