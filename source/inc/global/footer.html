@@ -13,7 +13,6 @@
             </form>
 
         </div>
-    <!--            <div class="socials mobile-only">-->
         <div class="footer__socials socials">
             <include src="source/inc/blocks/socials.html"
                      locals='{
@@ -56,22 +55,19 @@
         <div class="footer__address">
             <include src="source/inc/blocks/footer-address.html"></include>
         </div>
-<!--    </div>-->
-<!--    <div class="footer__bottom">-->
 
-        <button type="button" class="location mobile-only">Москва</button>
+        <button type="button" class="location mobile-only">
+            <svg class="location__icon" width="24" height="24" fill="none">
+                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+            </svg>
+            Москва
+        </button>
 
         <p class="footer__copyright">
-            <a href="/" class="copyright_link">Доктор&nbsp;Стёпа&nbsp;©&nbsp;2020.</a> Интернет-магазин медицинской одежды
+            <a href="/" class="copyright_link">Доктор&nbsp;Стёпа&nbsp;©&nbsp;2020.</a>
+            &ensp;Интернет-магазин медицинской одежды
         </p>
 
-<!--        <div class="socials desktop-only">-->
-<!--            <include src="source/inc/blocks/socials.html"-->
-<!--                     locals='{-->
-<!--                        "size": "30"-->
-<!--                    }'>-->
-<!--            </include>-->
-<!--        </div>-->
     </div>
 </footer>
 

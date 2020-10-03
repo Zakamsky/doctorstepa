@@ -1,10 +1,23 @@
 .footer{
-  padding-top: 40px;
-  background-image: linear-gradient(to top, #EEEEEE 80px, rgba(242, 242, 242, 0.7) 80px);
+  padding-top: 70px;
+  background-image: linear-gradient(to top, #EEEEEE 86px, rgba(242, 242, 242, 0.7) 86px);
+  @include media(md){
+    padding-top: 40px;
+    background-image: linear-gradient(to top, #EEEEEE 80px, rgba(242, 242, 242, 0.7) 80px);
+  }
   &__wrapper{
     display: block;
     @include media(md){
       display: grid;
+      rid-template-columns: max-content max-content max-content;
+      grid-template-rows: auto auto auto 80px;
+      grid-template-areas:
+              "brand address callback"
+              ". address  location"
+              "fnav fnav fnav"
+              "copy copy social";
+    }
+    @include media(lg){
       grid-template-columns: 21.8% 1fr 21.8%;
       grid-template-rows: auto 1fr 80px;
       grid-template-areas:
@@ -12,28 +25,44 @@
               "address fnav ."
               "copy copy social";
     }
-
   }
   &__callback{
-    //grid-template: social;
     grid-area: callback;
     justify-self: right;
   }
   &__socials{
     grid-area: social;
-    height: 80px;
+    margin-top: 25px;
+    margin-bottom: 11px;
+    @include media(md){
+      margin: 0;
+      height: 80px;
+    }
     .socials{
       width: 100%;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
+      @include media(md){
+        justify-content: flex-end;
+      }
     }
   }
   &__nav{
     grid-area: fnav;
+    @include media(md){
+      margin-top: 30px;
+    }
+    @include media(lg){
+      margin-top: 0;
+    }
   }
   &__brand{
-    grid-area: brand;
-    margin-bottom: 30px;
+    display: none;
+    @include media(md){
+      display: block;
+      grid-area: brand;
+      //margin-bottom: 30px;
+    }
     &-logo{
       width: 175px;
       height: 58px;
@@ -41,19 +70,66 @@
   }
   &__address{
     grid-area: address;
+    padding-top: 35px;
+    @include media(md){
+      padding-top: 0;
+    }
+    @include media(lg){
+      padding-top: 30px;
+    }
     .contacts{
       text-align: left;
-      &__workhours-title{
-        font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      @include media(md){
+        display: block;
+      }
+      &__phone{
+        font-size: 14px;
+        @include media(md){
+          font-size: 18px;
+        }
+      }
+      &__title{
+        margin-top: 0;
+        @include media(md){
+          margin-top: 25px;
+        }
       }
     }
   }
+  .location{
+    margin-top: 16px;
+    padding: 16px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    @include media(md){
+      grid-area: location;
+      border: none;
+    }
+  }
   &__copyright{
-    grid-area: copy;
-    height: 80px;
+    height: 86px;
     margin: 0;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    @include media(md){
+      grid-area: copy;
+      flex-direction: row;
+      justify-content: flex-start;
+      height: 80px;
+      text-align: center;
+    }
+    .copyright_link{
+      display: block;
+      //margin: 0 auto;
+      @include media(md){
+        display: inline;
+      }
+    }
     .copyright_link:hover{
       color: #41414A;
     }
@@ -66,7 +142,12 @@
     text-align: right;
   }
   &__title{
+    margin-bottom: 15px;
+    text-align: center;
     font-weight: 700;
+    @include media(md){
+      text-align: right;
+    }
   }
   &__form{
     height: 44px;
@@ -89,39 +170,5 @@
     background: #F2AA07;
     border-radius: 0px 20px 20px 0px;
     border: none;
-  }
-}
-.footer-nav{
-  display: block;
-  @include media(md){
-    display: flex;
-  }
-  //width: 670px;
-  &__bloc{
-    width: calc(100% / 3);
-    min-width: 175px;
-  }
-  &__title{
-    margin-bottom: 25px;
-    font-weight: 700;
-  }
-  &__list{
-    @include list-unstyled;
-
-    margin-bottom: 40px;
-  }
-  &__item{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    color: #808D9A;
-  }
-  &__item+&__item{
-    margin-top: 20px;
-  }
-  &__link{
-    &:hover{
-      color: #41414A;
-    }
   }
 }

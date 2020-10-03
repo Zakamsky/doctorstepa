@@ -8,8 +8,12 @@
       color: inherit;
     }
   }
-  &__workhours{
-    margin: 0;
+  &__title{
+    margin-top: 25px;
+    font-weight: 700;
+  }
+  &__text{
+    margin: 10px 0 0;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;

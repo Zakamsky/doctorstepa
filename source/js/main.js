@@ -66,4 +66,22 @@ jQuery( document ).ready(function( $ ) {
         minimumResultsForSearch: Infinity //hide search field
     });
 
+    //футер меню
+    const footerSwitchers = document.querySelectorAll('.js-footer-switcher');
+    footerSwitchers.forEach(item => {
+        item.addEventListener('click', event => {
+            // event.target.classList.add('open')
+
+            if ( event.target.matches('.open') ){
+                event.target.classList.remove('open')
+            } else {
+                footerSwitchers.forEach(item => {
+                    item.classList.remove('open');
+                });
+                event.target.classList.add('open')
+            }
+
+        })
+    });
+
 });
