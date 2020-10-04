@@ -17,3 +17,7 @@
   }
 
 }
+
+@mixin transition-my($dur: .35s){
+  transition: all $dur ease-in-out;
+}

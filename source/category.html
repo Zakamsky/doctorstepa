@@ -1,13 +1,59 @@
+<!-- body.page -->
+<!-- .page__header -->
 <include src="source/inc/global/header.html"
          locals='{
-            "title": "Categoryname | Доктор Степа"
+            "title": "Доктор Степа | Интернет-магазин медицинской одежды"
         }'>
-
 </include>
+<!-- / .page__header -->
 <main class="page__content">
     <div class="container">
+        <section class="promo">
+            <div class="row">
+<!--                <div class="col-lg-9">-->
+<!--                    <include src="source/inc/blocks/top-banner.html"></include>-->
+<!--                </div>-->
+<!--                <div class="col-lg-3 d-none d-lg-block">-->
+<!--                    <include src="source/inc/blocks/narrow-banner.html"></include>-->
+<!--                </div>-->
+            </div>
 
+        </section>
+        <section class="featured-products products-new">
+            <include src="source/inc/blocks/products-new-slider.html"
+                     locals='{
+            "title": "Более 20 брендов в наличии"
+        }'></include>
+        </section>
+        <section class="brands">
+<!--            <include src="source/inc/blocks/pop-categories.html"-->
+<!--                     locals='{-->
+<!--            "title": "Брэнды"-->
+<!--        }'></include>-->
+        </section>
+        <section class="for-whom">
+            <h2 class="for-whom__title section-title">Для кого</h2>
+            <div class="row">
+                <div class="col-lg-4 d-none d-lg-block">
+                    <include src="source/inc/blocks/narrow-banner.html"></include>
+                </div>
+                <div class="col-lg-8">
+                    <include src="source/inc/blocks/for-whom.html"
+                    ></include>
+                </div>
+            </div>
+        </section>
+
+        <section class="pop-categories">
+            <include src="source/inc/blocks/pop-categories.html"
+                     locals='{
+                    "title": "Популярные категории"
+                }'></include>
+        </section>
 
     </div>
 </main>
+<!-- .page__footer -->
 <include src="source/inc/global/footer.html" ></include>
+<!-- / .page__footer-->
+<!-- / body.page -->

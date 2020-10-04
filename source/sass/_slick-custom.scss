@@ -1,0 +1,33 @@
+.slick-slider{
+  &.row{
+    width: calc(100% + 30px);
+    display: grid !important;
+  }
+
+  .slick-slide .product,
+  .slick-slide .pop-category{
+    max-width: 100%;
+  }
+  .slick-arrow{
+    display: none !important;
+    @include media(md){
+      display: block !important;
+      position: absolute;
+      top: -50px;
+      right: 15px;
+      width: 35px;
+      height: 35px;
+      border: none;
+      background-color: transparent;
+      background-image: url('../img/round-right.svg');
+      &--prev{
+        right: 60px;
+        background-image: url('../img/round-left.svg');
+      }
+      .arrow{
+        opacity: 0;
+      }
+    }
+
+  }
+}

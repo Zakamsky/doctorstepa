@@ -19,11 +19,34 @@ html{
     }
   }
   &__content{
-    padding-top: 40px;
-    padding-bottom: 150px;
+    padding-top: 12px;
+    padding-bottom: 70px;
     background-color: rgba(242, 242, 242, 0.21);
-    &>.container>section+section{
-      margin-top: 146px;
+    @include media(md){
+      padding-top: 40px;
+      padding-bottom: 150px;
     }
+    .promo{
+      margin-bottom: 67px;
+      @include media(lg){
+        margin-bottom: 127px;
+      }
+    }
+    .featured-products{
+      margin-bottom: 66px;
+      @include media(lg){
+        margin-bottom: 135px;
+      }
+    }
+    .pop-categories{
+      margin-bottom: 48px;
+      @include media(lg){
+        margin-bottom: 135px;
+      }
+    }
+    .promo-bottom{
+      //margin-top: 120px !important;
+    }
+
   }
 }

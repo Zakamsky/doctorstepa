@@ -1,8 +1,93 @@
 .products{
+  width: 100%;
+  max-width: 100%;
   &__title{
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 1.37;
+    @include media(md){
+      padding-right: 80px;
+    }
+  }
+  &__row{
+    @include list-style-none;
+  }
+  &__btn{
+    display: block;
+    margin: 0 auto;
+  }
+  .btn-main-outline{
+    width: 263px;
+  }
+}
+.product{
+  padding-top: 15px;
+  padding-bottom: 16px;
+  @include media(md){
+    padding-top: 20px;
+    padding-bottom: 38px;
+  }
+  &:hover &__img{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+  &__img{
+    max-width: 100%;
+    height: auto;
+    border-radius: $radius-md;
+
+    @include transition-my;
+    @include media(md){
+      border-radius: $radius-lg;
+    }
+  }
+  &__price{
+    margin-top: 8px;
+    @include media(md){
+      margin-top: 13px;
+    }
+    .current{
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.25;
+      @include media(md){
+        font-size: 22px;
+      }
+    }
+    .old{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.5;
+      color: $color-text-light;
+      @include media(md){
+        font-size: 14px;
+      }
+    }
+    .rub-ico{
+      max-height: 1em;
+    }
+  }
+  &__title{
+    padding-top: 6px;
+    padding-bottom: 9px;
+    min-height: 22px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    @include media(md){
+      padding-top: 6px;
+      padding-bottom: 21px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+  &__title+.btn{
+    display: block;
+    margin: 0 auto;
+    @include media(lg){
+      margin: 0;
+    }
   }
 
 }
+
+//slick slider styles in slick-custom file
+
+
+

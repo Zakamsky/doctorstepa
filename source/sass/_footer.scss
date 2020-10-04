@@ -1,5 +1,5 @@
 .footer{
-  padding-top: 70px;
+  padding-top: 64px;
   background-image: linear-gradient(to top, #EEEEEE 86px, rgba(242, 242, 242, 0.7) 86px);
   @include media(md){
     padding-top: 40px;
@@ -33,7 +33,7 @@
   &__socials{
     grid-area: social;
     margin-top: 25px;
-    margin-bottom: 11px;
+    margin-bottom: 20px;
     @include media(md){
       margin: 0;
       height: 80px;
@@ -70,12 +70,12 @@
   }
   &__address{
     grid-area: address;
-    padding-top: 35px;
+    padding-top: 31px;
     @include media(md){
       padding-top: 0;
     }
     @include media(lg){
-      padding-top: 30px;
+      padding-top: 12px;
     }
     .contacts{
       text-align: left;
@@ -99,11 +99,13 @@
     }
   }
   .location{
-    margin-top: 16px;
-    padding: 16px;
+    margin-top: 8px;
+    padding: 18px;
     width: 100%;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     @include media(md){
+      margin-top: 16px;
+      padding: 16px;
       grid-area: location;
       border: none;
     }

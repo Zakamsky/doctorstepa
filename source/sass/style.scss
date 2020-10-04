@@ -10,6 +10,8 @@
 @import "fonts";
 @import "bootstrap";
 @import "select2/core";
+@import "slick/slick";
+@import "slick-custom";
 @import "utilities";
 
 //styles for pages and global includes:
@@ -30,6 +32,7 @@
 @import "blocks/narrow-banner";
 @import "blocks/features";
 @import "blocks/products-slider";
+@import "blocks/pop-categories";
 
 
 @import "blocks/footer-nav";

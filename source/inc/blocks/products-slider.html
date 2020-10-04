@@ -1,15 +1,15 @@
-<h2 class="products__title">{{title}}</h2>
+<h2 class="products__title section-title">{{title}}</h2>
 
-<div class=".products__row row">
-    <div class="product col-2 col-lg-3">
+<ul class="products__row row js-products-row">
+    <li class="product col-6 col-md-4 col-lg-3">
         <div class="product__pic">
             <include src="source/inc/utils/picture.html"
                      locals='{
-                        "name": "banner-top",
+                        "name": "prod-1",
                         "ext": "png",
-                        "width": "290",
-                        "height": "470",
-                        "class": "banner__img",
+                        "width": "278",
+                        "height": "288",
+                        "class": "product__img",
                         "alt": ""
                     }'>
             </include>
@@ -17,19 +17,141 @@
         <div class="product__price">
             <span class="current text-main">
                 12 000
-                <svg class="narrow-banner__rub-ico" width="15" height="19">
+                <svg class="rub-ico" width="15" height="19">
                     <use xlink:href="img/sprite.svg#icon-rub"></use>
                 </svg>
             </span>
             <del class="old">
                 13 000
-                <svg class="narrow-banner__rub-ico" width="15" height="19">
+                <svg class="rub-ico" width="15" height="19">
                     <use xlink:href="img/sprite.svg#icon-rub"></use>
                 </svg>
             </del>
         </div>
         <div class="product__title">Белый халат с красными вставками</div>
         <button type="button" class="btn btn-main">Заказать</button>
-    </div>
-</div>
+    </li>
+    <li class="product col-6 col-md-4 col-lg-3">
+        <div class="product__pic">
+            <include src="source/inc/utils/picture.html"
+                     locals='{
+                        "name": "prod-2",
+                        "ext": "png",
+                        "width": "278",
+                        "height": "288",
+                        "class": "product__img",
+                        "alt": ""
+                    }'>
+            </include>
+        </div>
+        <div class="product__price">
+            <span class="current text-main">
+                12 000
+                <svg class="rub-ico" width="15" height="19">
+                    <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
+            </span>
+            <del class="old">
+                13 000
+                <svg class="rub-ico" width="15" height="19">
+                    <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
+            </del>
+        </div>
+        <div class="product__title">Белый халат с красными вставками</div>
+        <button type="button" class="btn btn-main">Заказать</button>
+    </li>
+    <li class="product col-6 col-md-4 col-lg-3">
+        <div class="product__pic">
+            <include src="source/inc/utils/picture.html"
+                     locals='{
+                        "name": "prod-3",
+                        "ext": "png",
+                        "width": "278",
+                        "height": "288",
+                        "class": "product__img",
+                        "alt": ""
+                    }'>
+            </include>
+        </div>
+        <div class="product__price">
+            <span class="current text-main">
+                12 000
+                <svg class="rub-ico" width="15" height="19">
+                    <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
+            </span>
+            <del class="old">
+                13 000
+                <svg class="rub-ico" width="15" height="19">
+                    <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
+            </del>
+        </div>
+        <div class="product__title">Белый халат с красными вставками</div>
+        <button type="button" class="btn btn-main">Заказать</button>
+    </li>
+    <li class="product col-6 col-md-4 col-lg-3">
+        <div class="product__pic">
+            <include src="source/inc/utils/picture.html"
+                     locals='{
+                        "name": "prod-4",
+                        "ext": "png",
+                        "width": "278",
+                        "height": "288",
+                        "class": "product__img",
+                        "alt": ""
+                    }'>
+            </include>
+        </div>
+        <div class="product__price">
+            <span class="current text-main">
+                12 000
+                <svg class="rub-ico" width="15" height="19">
+                    <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
+            </span>
+            <del class="old">
+                13 000
+                <svg class="rub-ico" width="15" height="19">
+                    <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
+            </del>
+        </div>
+        <div class="product__title">Белый халат с красными вставками</div>
+        <button type="button" class="btn btn-main">Заказать</button>
+    </li>
+    <li class="product col-6 col-md-4 col-lg-3">
+        <div class="product__pic">
+            <include src="source/inc/utils/picture.html"
+                     locals='{
+                        "name": "prod-5",
+                        "ext": "png",
+                        "width": "278",
+                        "height": "288",
+                        "class": "product__img",
+                        "alt": ""
+                    }'>
+            </include>
+        </div>
+        <div class="product__price">
+            <span class="current text-main">
+                12 000
+                <svg class="rub-ico" width="15" height="19">
+                    <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
+            </span>
+            <del class="old">
+                13 000
+                <svg class="rub-ico" width="15" height="19">
+                    <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
+            </del>
+        </div>
+        <div class="product__title">Белый халат с красными вставками</div>
+        <button type="button" class="btn btn-main">Заказать</button>
+    </li>
+</ul>
+
+<button type="button" class="products__btn btn btn-outline">Смотреть еще</button>
 

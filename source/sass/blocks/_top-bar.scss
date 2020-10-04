@@ -2,8 +2,8 @@
   display: none;
   @include media($switch-only){
     display: block;
-    margin-top: 43px;
-    margin-bottom: 31px;
+    margin-top: 39px;
+    margin-bottom: 27px;
   }
   &.open{ //mobile menu
     @include media-breakpoint-down(md){
@@ -18,9 +18,9 @@
       padding: 0;
       background-color: rgba(#41414A, 0.6);
       z-index: 999;
-      @include media(md){
-        top: 155px;
-      }
+      //@include media(md){
+      //  top: 155px;
+      //}
       .top-bar__wrapper{
         width: 250px;
         height: 100%;
@@ -87,7 +87,7 @@
   @include list-style-none();
   &__item+&__item{
     @include media(lg){
-      margin-left: 10px;
+      margin-left: 11.6px;
     }
   }
   &__link{
@@ -108,7 +108,7 @@
   }
 }
 .top-bar__login{
-  margin-left: 10px;
+  margin-left: 32px;
   margin-right: -10px;
 }
 

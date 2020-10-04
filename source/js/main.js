@@ -66,6 +66,113 @@ jQuery( document ).ready(function( $ ) {
         minimumResultsForSearch: Infinity //hide search field
     });
 
+    //слайдер продуктов js-products-row
+    $('.js-products-row').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        centerPadding: '30px',
+        dots: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-arrow slick-arrow--prev"><span class="arrow">&larr;</span><span class="visually-hidden">Предыдущий</span></button>',
+        nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><span class="arrow">&rarr;</span><span class="visually-hidden">Следующий</span></button>',
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            }
+        ]
+    });
+
+    //слайдер продуктов js-pop-categories-row
+    $('.js-pop-categories-row').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        centerPadding: '30px',
+        dots: false,
+        arrows: false,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: "unslick"
+            }
+        ]
+    });
+
+    //слайдер новинки
+    $('.js-products-new-row').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        centerPadding: '30px',
+        dots: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-arrow slick-arrow--prev"><span class="arrow">&larr;</span><span class="visually-hidden">Предыдущий</span></button>',
+        nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><span class="arrow">&rarr;</span><span class="visually-hidden">Следующий</span></button>',
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    rows: 2,
+
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    rows: 2,
+                }
+            }
+        ]
+    });
+
+
     //футер меню
     const footerSwitchers = document.querySelectorAll('.js-footer-switcher');
     footerSwitchers.forEach(item => {
