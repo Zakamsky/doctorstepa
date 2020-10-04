@@ -1,1 +1,35 @@
-<h2>{{title}}</h2>
+<h2 class="products__title">{{title}}</h2>
+
+<div class=".products__row row">
+    <div class="product col-2 col-lg-3">
+        <div class="product__pic">
+            <include src="source/inc/utils/picture.html"
+                     locals='{
+                        "name": "banner-top",
+                        "ext": "png",
+                        "width": "290",
+                        "height": "470",
+                        "class": "banner__img",
+                        "alt": ""
+                    }'>
+            </include>
+        </div>
+        <div class="product__price">
+            <span class="current text-main">
+                12 000
+                <svg class="narrow-banner__rub-ico" width="15" height="19">
+                    <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
+            </span>
+            <del class="old">
+                13 000
+                <svg class="narrow-banner__rub-ico" width="15" height="19">
+                    <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
+            </del>
+        </div>
+        <div class="product__title">Белый халат с красными вставками</div>
+        <button type="button" class="btn btn-main">Заказать</button>
+    </div>
+</div>
+
