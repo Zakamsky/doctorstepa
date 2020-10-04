@@ -1,0 +1,47 @@
+.for-whomes{
+  &__row{
+    @include list-style-none;
+  }
+}
+
+.for-whome{
+  padding-top: 15px;
+  padding-bottom: 5px;
+  @include media(md){
+    padding-top: 20px;
+    padding-bottom: 4px;
+  }
+  &:hover &__img{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+  &:hover &__link{
+    color: inherit;
+  }
+  &__img{
+    max-width: 100%;
+    height: auto;
+    border-radius: $radius-md;
+
+    @include transition-my;
+    @include media(md){
+      border-radius: $radius-lg;
+    }
+  }
+
+  &__title{
+    padding-top: 15px;
+    min-height: 22px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    @include media(md){
+      min-height: 29px;
+      padding-top: 15px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+}
+
+//slick slider styles in slick-custom file

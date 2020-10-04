@@ -73,7 +73,6 @@ jQuery( document ).ready(function( $ ) {
         autoplaySpeed: 2000,
         slidesToShow: 2,
         slidesToScroll: 2,
-        centerPadding: '30px',
         dots: false,
         arrows: true,
         prevArrow: '<button type="button" class="slick-arrow slick-arrow--prev"><span class="arrow">&larr;</span><span class="visually-hidden">Предыдущий</span></button>',
@@ -100,6 +99,39 @@ jQuery( document ).ready(function( $ ) {
         ]
     });
 
+    //слайдер продуктов js-brands-row
+    $('.js-brands-row').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-arrow slick-arrow--prev"><span class="arrow">&larr;</span><span class="visually-hidden">Предыдущий</span></button>',
+        nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><span class="arrow">&rarr;</span><span class="visually-hidden">Следующий</span></button>',
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 6,
+
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
+
     //слайдер продуктов js-pop-categories-row
     $('.js-pop-categories-row').slick({
         infinite: true,
@@ -107,7 +139,41 @@ jQuery( document ).ready(function( $ ) {
         autoplaySpeed: 2000,
         slidesToShow: 2,
         slidesToScroll: 2,
-        centerPadding: '30px',
+        dots: false,
+        arrows: false,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: "unslick"
+            }
+        ]
+    });
+
+    //слайдер для кого js-for-whomes-row
+    $('.js-for-whomes-row').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         dots: false,
         arrows: false,
         mobileFirst: true,
@@ -143,7 +209,6 @@ jQuery( document ).ready(function( $ ) {
         autoplaySpeed: 2000,
         slidesToShow: 2,
         slidesToScroll: 2,
-        centerPadding: '30px',
         dots: false,
         arrows: true,
         prevArrow: '<button type="button" class="slick-arrow slick-arrow--prev"><span class="arrow">&larr;</span><span class="visually-hidden">Предыдущий</span></button>',

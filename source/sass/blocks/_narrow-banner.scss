@@ -4,6 +4,7 @@
   border-radius: $radius-xl;
   background-color: $color-background-light;
   background-image: url('../img/narrow-banner.svg');
+  background-size: 100%;
   &__text{
     margin-bottom: 11px;
     font-weight: bold;
