@@ -1,0 +1,21 @@
+.narrow-banner{
+  height: 100%;
+  padding: 70px 28px;
+  border-radius: $radius-xl;
+  background-color: $color-background-light;
+  background-image: url('../img/narrow-banner.svg');
+  &__text{
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $color-accent;
+  }
+  &__price{
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    color: $color-text;
+  }
+}

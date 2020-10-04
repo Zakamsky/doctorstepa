@@ -1,1 +1,24 @@
-top banner
+<div class="banner">
+    <div class="banner__content">
+        <h1 class="banner__title">
+            <span class="banner__title-inner text-main">Интернет-магазин</span>
+            медицинской одежды
+        </h1>
+        <p class="banner__text">
+            Работаем с лучшими производителями и поставщиками Тут ещё небольшой короткий текст
+        </p>
+        <button type="button" class="banner__btn btn btn-main">Каталог</button>
+    </div>
+    <div class="banner__pic">
+        <include src="source/inc/utils/picture.html"
+                 locals='{
+                        "name": "banner-top",
+                        "ext": "png",
+                        "width": "290",
+                        "height": "470",
+                        "class": "banner__img",
+                        "alt": ""
+                    }'>
+        </include>
+    </div>
+</div>

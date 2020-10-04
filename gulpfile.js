@@ -90,7 +90,7 @@ const webpPics = () => {
 };
 exports.webpPics = webpPics;
 //Imagemin
-const images = () => {
+const img = () => {
     return gulp.src("source/img/**/*.{jpg,png,svg}")
         .pipe(imagemin([
             imagemin.optipng({optimizationLevel: 3}),
@@ -99,7 +99,9 @@ const images = () => {
         ]))
         .pipe(gulp.dest('./build/img'));
 };
-exports.images = images;
+exports.img = img;
+
+
 // Sprite
 const sprite = () => {
     return gulp.src("source/img/**/icon-*.svg")
@@ -152,13 +154,16 @@ const watcher = () => {
     gulp.watch("source/sass/**/*.scss", gulp.series(styles));
     gulp.watch("source/**/*.html", gulp.series(html));
     gulp.watch("source/js/**/*.js", gulp.series(scripts));
-}
+};
+
 // all images
-const imagesAll = gulp.series( webpPics, images);
-exports.imagesAll = imagesAll;
+const images = gulp.series( webpPics, img);
+exports.images = images;
+
 // Build
-const build = gulp.series(clean, copy, styles, scripts, webpPics, images, sprite, html);
+const build = gulp.series(clean, copy, styles, scripts, webpPics, img, sprite, html);
 exports.build = build;
+
 // Start
 // exports.start = gulp.series(build, server, watcher);
 const develop = gulp.series(build, server, watcher);

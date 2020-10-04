@@ -1,0 +1,41 @@
+.features{
+  margin-top: 13px;
+  padding: 17px 10px 0;
+  @include media(360){
+    padding: 17px 37px 0;
+  }
+  background: #FFFFFF;
+  border-radius: 20px;
+  @include media(md){
+    margin-top: 28px;
+    border-radius: 30px;
+  }
+  @include media(lg){
+    padding: 9px 100px;
+  }
+  &__block{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  &__ico{
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    @include media(md){
+      width: auto;
+      height: auto;
+    }
+  }
+  &__text{
+    max-width: 100px;
+    margin: 0;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    @include media(md){
+      font-size: 14px;
+    }
+  }
+}

@@ -55,3 +55,50 @@ a{
     }
   }
 }
+
+.btn{
+  padding: 10px;
+  width: 94px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $color-light;
+  border-radius: 19px;
+  border: 1px solid $color-text-light;
+  background-color: $color-text-light;
+  transition: all .35s ease;
+  @include media(md){
+    font-size: 14px;
+    padding: 11px 19px;
+    border-radius: 20px;
+  }
+}
+
+.btn-main{
+  color: $color-light;
+  background-color: $color-accent;
+  border-color: $color-accent;
+  &:hover{
+    background-color: $color-accent-hover;
+    border-color: $color-accent-hover;
+  }
+}
+.btn-main-outline{
+  color: $color-text-light;
+  background-color: transparent;
+  border-color: $color-accent;
+  &:hover{
+    color: $color-text;
+    border-color: $color-accent-hover;
+  }
+}
+
+.btn-outline{
+  color: $color-text-light;
+  background-color: transparent;
+  border-color: $color-text-light;
+  &:hover{
+    color: $color-text;
+    border-color: $color-accent;
+  }
+}

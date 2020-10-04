@@ -1,0 +1,139 @@
+.banner{
+  display: flex;
+  background-color: $color-background;
+  border-radius: $radius-xl;
+  &--light{
+    background-color: $color-background-lighted;
+  }
+  &__content{
+    flex-grow: 1;
+    padding: 44px 0 0 10px;
+    @include media(md){
+      padding: 112px 10px 0 40px;
+    }
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;
+    color: #41414A;
+    margin-bottom: 30px;
+    @include media(md){
+      font-size: 38px;
+      line-height: 47px;
+    }
+    @include media(lg){
+      font-size: 38px;
+      line-height: 47px;
+    }
+    &-inner{
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 26px;
+      @include media(md){
+        font-size: 29px;
+      }
+      @include media(xl){
+        font-size: 38px;
+        line-height: 47px;
+      }
+    }
+  }
+  &__text{
+    display: none;
+    @include media(md){
+      display: block;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: $color-text;
+    }
+  }
+  &__btn{
+    width: 100px;
+    @include media(md){
+      width: 151px;
+      padding: 16px 26px;
+      font-size: 16px;
+      line-height: 20px;
+      border-radius: $radius-lg;
+    }
+  }
+  &__pic{
+    position: relative;
+    flex-shrink: 0;
+    width: 129px;
+    @include media(md){
+      width: 290px;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 52.25px;
+      left: 0;
+      right: 0;
+      padding-top: 100%;
+      background: rgba($color-accent, .3);
+      border-radius: 50%;
+      z-index: 0;
+      @include media(md){
+        top: 95px;
+        right: 10px;
+      }
+    }
+
+  }
+  &__img{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
+  &__link{
+    text-decoration: underline;
+    color: $color-text-light;
+  }
+  &--wide{
+    padding: 70px 20px;
+    @include media(md){
+      padding-bottom: 0;
+    }
+    @include media(lg){
+      padding: 0 72px 0 0;
+    }
+    .banner__content{
+      padding: 0 ;
+      @include media(md){
+        padding-bottom: 40px;
+      }
+      @include media(lg){
+        padding: 120px 0 20px 103px;
+      }
+    }
+    .banner__text{
+      display: block;
+      font-size: 12px;
+      @include media(lg){
+        font-size: 14px;
+      }
+    }
+    .banner__pic{
+      display: none;
+      @include media(md){
+        display: block;
+        margin-top: auto;
+        width: 40%;
+        height: auto;
+        &:before{
+          top: 51px;
+          right: 0;
+        }
+      }
+      @include media(lg){
+        width: 443px;
+        height: 539px;
+      }
+    }
+  }
+}
