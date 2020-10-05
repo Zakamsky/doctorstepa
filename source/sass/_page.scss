@@ -38,15 +38,28 @@ html{
         margin-bottom: 135px;
       }
     }
-    .pop-categories{
-      margin-bottom: 48px;
+    .promo-bottom{
+      margin-top: 48px;
       @include media(lg){
-        margin-bottom: 135px;
+        margin-top: 135px;
       }
     }
-    .promo-bottom{
-      //margin-top: 120px !important;
+    .categories{
+      margin-top: 42px;
+      margin-bottom: 41px;
+      @include media(lg){
+        margin-top: 20px;
+        margin-bottom: 120px;
+      }
     }
+    .for-whom{
+      margin-bottom: 44px;
+      @include media(lg){
+        margin-top: 113px;
+        margin-bottom: 110px;
+      }
+    }
+
 
   }
 }

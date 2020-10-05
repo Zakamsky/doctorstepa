@@ -8,21 +8,28 @@
 <!-- / .page__header -->
 <main class="page__content">
     <div class="container">
-        <section class="promo">
-            <div class="row">
-<!--                <div class="col-lg-9">-->
-<!--                    <include src="source/inc/blocks/top-banner.html"></include>-->
-<!--                </div>-->
-<!--                <div class="col-lg-3 d-none d-lg-block">-->
-<!--                    <include src="source/inc/blocks/narrow-banner.html"></include>-->
-<!--                </div>-->
-            </div>
-
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="#!" class="breadcrumbs__link">Каталог</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link">третья ссылка...</a>
+                <!--  предполагаю что тут будет цикл, у последней ссылки на текущую страницу надо прсото убрать href -->
+            </li>
+        </ul>
+        <section class="categories">
+            <include src="source/inc/blocks/categories.html"
+                     locals='{
+            "title": "Каталог медицинской одежды"
+        }'></include>
         </section>
         <section class="featured-products products-new">
             <include src="source/inc/blocks/products-new-slider.html"
                      locals='{
-            "title": "Более 20 брендов в наличии"
+            "title": "Новинки"
         }'></include>
         </section>
         <section class="brands">
@@ -43,7 +50,6 @@
                 </div>
             </div>
         </section>
-
         <section class="pop-categories">
             <include src="source/inc/blocks/pop-categories.html"
                      locals='{

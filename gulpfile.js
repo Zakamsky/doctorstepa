@@ -91,7 +91,7 @@ const webpPics = () => {
 exports.webpPics = webpPics;
 //Imagemin
 const img = () => {
-    return gulp.src("source/img/**/*.{jpg,png,svg}")
+    return gulp.src("source/img/**/*.{jpg,png,svg}", "!source/img/sprite/*")
         .pipe(imagemin([
             imagemin.optipng({optimizationLevel: 3}),
             imagemin.mozjpeg({progressive: true}),
@@ -104,7 +104,7 @@ exports.img = img;
 
 // Sprite
 const sprite = () => {
-    return gulp.src("source/img/**/icon-*.svg")
+    return gulp.src("source/img/sprite**/icon-*.svg")
         .pipe(imagemin([
             imagemin.svgo({
                 plugins: [
@@ -123,7 +123,6 @@ exports.sprite = sprite;
 const copy = () => {
     return gulp.src([
         "source/fonts/**/*.{woff,woff2,ttf}",
-        // "source/js/**",
         "source/*.ico"
     ], {
         base: "source"
