@@ -1,0 +1,138 @@
+<!-- body.page -->
+<!-- .page__header -->
+<include src="source/inc/global/header.html"
+         locals='{
+            "title": "Доктор Степа | Интернет-магазин медицинской одежды"
+        }'>
+</include>
+<!-- / .page__header -->
+<main class="page__content">
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="#!" class="breadcrumbs__link">Каталог</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link">Купить медицинский халат</a>
+                <!--  предполагаю что тут будет цикл, у последней ссылки на текущую страницу надо прсото убрать href -->
+            </li>
+        </ul>
+
+        <h1 class="categories__title section-title">Купить медицинский халат</h1>
+
+        <div class="row">
+            <main class="product-page col-lg-9">
+                <div class="product-page__sorting">
+                    <form class="sort-form">
+                        <select name="sort" class="sort-form__select-sort js-select2" >
+                            <option value="По популярности">По популярности</option>
+                            <option value="По цене">По цене</option>
+                            <option value="По рейтингу">По рейтингу</option>
+                        </select>
+                        <label>
+                            На странице
+                            <select name="num-on-page" class="sort-form__num-on-page js-select2" >
+                                <option value="12">12</option>
+                                <option value="18">18</option>
+                                <option value="24">24</option>
+                            </select>
+                        </label>
+                        <div class="filter-form__field-group">
+                            <input type="checkbox" name="only-sale" id="only-sale" class="filter-form__checkbox">
+                            <label for="only-sale" class="filter-form__label">Только акционные</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="product-page__products">
+                    <include src="source/inc/blocks/products-row.html"></include>
+                </div>
+                <div class="product-page__navigation">
+                    <ul class="pagination">
+                        <li class="pagination__item">
+                            <a href="#!" class="pagination__link" aria-label="страница 1">1 </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#!" class="pagination__link" aria-label="страница 2">2 </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#!" class="pagination__link" aria-label="страница 3">3 </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#!" class="pagination__link" aria-label="страница 4">4 </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#!" class="pagination__link" aria-label="страница 5">5 </a>
+                        </li>
+                        <li class="pagination__item">
+                            ...
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#!" class="pagination__link" aria-label="страница 9">9 </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#!" class="pagination__link" aria-label="страница 10">10 </a>
+                        </li>
+                    </ul>
+                    <div class="arrows-links">
+                        <a href="#!" class="arrows-links__link arrows-links__link--prev" aria-label="prev"></a>
+                        <a href="#!" class="arrows-links__link arrows-links__link--next" aria-label="next"></a>
+                    </div>
+                </div>
+                <section class="customers-photo">
+                    <!--            <include src="source/inc/blocks/products-new-slider.html"-->
+                    <!--                     locals='{-->
+                    <!--            "title": "Новинки"-->
+                    <!--        }'></include>-->
+                </section>
+                <section class="banner-adaptive">
+                    <!--            <include src="source/inc/blocks/brands.html"-->
+                    <!--                     locals='{-->
+                    <!--            "title": "Брэнды"-->
+                    <!--        }'></include>-->
+                </section>
+            </main>
+            <aside class="shop-filter col-lg-3 order-lg-first">
+                <div class="filter-header">
+                    <h2 class="filter-header__title">Фильтр товаров</h2>
+                    <button type="button" class="filter-header btn-link">Сбросить</button>
+<!--                todo:    возможно это даже не кнопка а ссылка на страницу без гетпараметров фильтра  -->
+                </div>
+                <form action="" class="filter-form">
+                    <div class="filter-form__group">
+                        <div class="filter-form__header">
+                            <p class="filter-form__heading">Тип товара</p>
+                            <button type="button" class="filter-form__reset">Сбросить</button>
+                        </div>
+                        <div class="filter-form__field-group">
+                            <input type="checkbox" name="gown" id="gown" class="filter-form__checkbox">
+                            <label for="gown" class="filter-form__label">Халаты</label>
+                        </div>
+                        <div class="filter-form__field-group">
+                            <input type="checkbox" name="surgical-suits" id="surgical-suits" class="filter-form__checkbox">
+                            <label for="surgical-suits" class="filter-form__label">Хиругрические костюмы</label>
+                        </div>
+                    </div>
+                    <button type="reset" class=" btn btn-main-outline">Сбросить все фильтры</button>
+<!--                 todo:   Возможно тут нужно выводить разные кнопки в зависимости от того применяются сейчас флитры на странице или нет, и если поставлены дополнитлье-->
+                </form>
+                <div class="popular-search">
+                    <p class="popular-search__title">Чаще всего ищут:</p>
+                    <a href="#!" class="popular-search__link">Недорогие белые халаты</a>
+                    <a href="#!" class="popular-search__link">Плотный белый халат</a>
+                </div>
+
+            </aside>
+        </div>
+        <!--        old    -->
+
+
+
+    </div>
+</main>
+<!-- .page__footer -->
+<include src="source/inc/global/footer.html" ></include>
+<!-- / .page__footer-->
+<!-- / body.page -->
