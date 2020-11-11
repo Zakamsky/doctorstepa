@@ -256,4 +256,28 @@ jQuery( document ).ready(function( $ ) {
         })
     });
 
+    //фильтр в каталоге переключение на мобилке
+    const filterButton = document.querySelector('.js-filter-opener');
+    const filterBlock = document.querySelector('.js-filter-open');
+    const filterCloseButton = document.querySelector('.js-filter-close');
+
+    const filterOpen = function(){
+        filterButton.classList.toggle('active')
+        filterBlock.classList.toggle('open')
+    };
+    const filterClose = function(){
+        filterBlock.classList.remove('open')
+        filterButton.classList.remove('active')
+
+    };
+
+    filterButton.addEventListener('click', event => {
+        filterOpen()
+    });
+
+    filterCloseButton.addEventListener('click', event => {
+        filterClose()
+    });
+
+
 });

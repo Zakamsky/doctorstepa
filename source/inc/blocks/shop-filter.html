@@ -1,0 +1,75 @@
+<aside class="shop-filter col-lg-3 d-none d-lg-block js-filter-open">
+    <div class="filter-header">
+        <h2 class="filter-header__title d-none d-lg-block">Фильтр товаров</h2>
+        <button type="button" class="filter-header__btn filter-header__btn--reset btn-link">
+            Сбросить
+            <span class="d-lg-none">все</span>
+        </button>
+        <!--                todo:    возможно это даже не кнопка а ссылка на страницу без гет параметров фильтра  -->
+        <button type="button" class="filter-header__btn filter-header__btn-close btn-link d-block d-lg-none js-filter-close">Назад</button>
+    </div>
+    <form action="catalog.html/" method="get" class="filter-form">
+        <div class="filter-form__group">
+            <div class="filter-form__header">
+                <p class="filter-form__heading">Тип товара</p>
+                <button type="button" class="filter-form__reset btn-link">Сбросить</button>
+            </div>
+            <div class="filter-form__field-group">
+                <input type="checkbox" name="gown" id="gown" class="visually-hidden">
+                <label for="gown" class="filter-form__label">Халаты</label>
+            </div>
+            <div class="filter-form__field-group">
+                <input type="checkbox" name="surgical-suits" id="surgical-suits" class="visually-hidden">
+                <label for="surgical-suits" class="filter-form__label">Хиругрические костюмы</label>
+            </div>
+        </div>
+        <div class="filter-form__group">
+            <div class="filter-form__header">
+                <p class="filter-form__heading">Цвет</p>
+                <button type="button" class="filter-form__reset btn-link">Сбросить</button>
+            </div>
+            <div class="filter-form__field-group">
+                <input type="checkbox" name="white" id="white" class="visually-hidden">
+                <label for="white" class="filter-form__label">Белый</label>
+            </div>
+            <div class="filter-form__field-group">
+                <input type="checkbox" name="red" id="red" class="visually-hidden">
+                <label for="red" class="filter-form__label">Красный</label>
+            </div>
+        </div>
+        <div class="filter-form__group">
+            <div class="filter-form__header">
+                <p class="filter-form__heading">Размеры</p>
+                <button type="button" class="filter-form__reset btn-link">Сбросить</button>
+            </div>
+            <div class="filter-form__field-group">
+                <input type="checkbox" name="s" id="s" class="visually-hidden">
+                <label for="s" class="filter-form__label">Размер S</label>
+            </div>
+            <div class="filter-form__field-group">
+                <input type="checkbox" name="m" id="m" class="visually-hidden">
+                <label for="m" class="filter-form__label">Размер M</label>
+            </div>
+            <div class="filter-form__field-group">
+                <input type="checkbox" name="xs" id="xs" class="visually-hidden">
+                <label for="xs" class="filter-form__label">Размер XS</label>
+            </div>
+            <div class="filter-form__field-group">
+                <input type="checkbox" name="size-plus" id="size-plus" class="visually-hidden">
+                <label for="size-plus" class="filter-form__label">Размер Size +</label>
+            </div>
+        </div>
+        <div class="filter-form__button-group">
+            <button type="submit" class="btn btn-main">Применить все</button>
+            <button type="reset" class=" btn btn-main-outline">Сбросить все</button>
+        </div>
+
+        <!--                 todo: Возможно тут нужно выводить разные кнопки в зависимости от того применяются сейчас флитры на странице или нет, и если поставлены дополнитлье-->
+    </form>
+    <div class="popular-search">
+        <p class="popular-search__title">Чаще всего ищут:</p>
+        <a href="#!" class="popular-search__link">Недорогие белые халаты</a>
+        <a href="#!" class="popular-search__link">Плотный белый халат</a>
+    </div>
+
+</aside>

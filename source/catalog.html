@@ -21,34 +21,27 @@
             </li>
         </ul>
 
-        <h1 class="categories__title section-title">Купить медицинский халат</h1>
+        <h1 class="catalog-title section-title">Каталог медицинский халат</h1>
 
-        <div class="row">
+        <div class="mobile-catalog-controls d-flex d-lg-none">
+            <button type="button" class="mobile-catalog-controls__btn js-filter-opener">Фильтры</button>
+            <button type="button" class="mobile-catalog-controls__btn mobile-catalog-controls__btn--select">Популярные</button>
+            <button type="button" class="mobile-catalog-controls__btn mobile-catalog-controls__btn--more" aria-label="дополнительные опции сортировки"></button>
+        </div>
+        <div class="row position-relative">
+
+            <include src="source/inc/blocks/shop-filter.html"></include>
+
             <main class="product-page col-lg-9">
-                <div class="product-page__sorting">
-                    <form class="sort-form">
-                        <select name="sort" class="sort-form__select-sort js-select2" >
-                            <option value="По популярности">По популярности</option>
-                            <option value="По цене">По цене</option>
-                            <option value="По рейтингу">По рейтингу</option>
-                        </select>
-                        <label>
-                            На странице
-                            <select name="num-on-page" class="sort-form__num-on-page js-select2" >
-                                <option value="12">12</option>
-                                <option value="18">18</option>
-                                <option value="24">24</option>
-                            </select>
-                        </label>
-                        <div class="filter-form__field-group">
-                            <input type="checkbox" name="only-sale" id="only-sale" class="filter-form__checkbox">
-                            <label for="only-sale" class="filter-form__label">Только акционные</label>
-                        </div>
-                    </form>
+
+                <div class="product-page__sorting d-none d-lg-block">
+                    <include src="source/inc/blocks/sort-form.html"></include>
+
                 </div>
                 <div class="product-page__products">
                     <include src="source/inc/blocks/products-row.html"></include>
                 </div>
+
                 <div class="product-page__navigation">
                     <ul class="pagination">
                         <li class="pagination__item">
@@ -76,61 +69,29 @@
                             <a href="#!" class="pagination__link" aria-label="страница 10">10 </a>
                         </li>
                     </ul>
-                    <div class="arrows-links">
-                        <a href="#!" class="arrows-links__link arrows-links__link--prev" aria-label="prev"></a>
-                        <a href="#!" class="arrows-links__link arrows-links__link--next" aria-label="next"></a>
-                    </div>
+
+                    <a href="#!" class="arrows-links arrows-links--prev" aria-label="prev"></a>
+                    <a href="#!" class="arrows-links arrows-links--next" aria-label="next"></a>
+
                 </div>
+
                 <section class="customers-photo">
                     <!--            <include src="source/inc/blocks/products-new-slider.html"-->
                     <!--                     locals='{-->
                     <!--            "title": "Новинки"-->
                     <!--        }'></include>-->
                 </section>
-                <section class="banner-adaptive">
+                <section class="banner-">
                     <!--            <include src="source/inc/blocks/brands.html"-->
                     <!--                     locals='{-->
                     <!--            "title": "Брэнды"-->
                     <!--        }'></include>-->
                 </section>
             </main>
-            <aside class="shop-filter col-lg-3 order-lg-first">
-                <div class="filter-header">
-                    <h2 class="filter-header__title">Фильтр товаров</h2>
-                    <button type="button" class="filter-header btn-link">Сбросить</button>
-<!--                todo:    возможно это даже не кнопка а ссылка на страницу без гетпараметров фильтра  -->
-                </div>
-                <form action="" class="filter-form">
-                    <div class="filter-form__group">
-                        <div class="filter-form__header">
-                            <p class="filter-form__heading">Тип товара</p>
-                            <button type="button" class="filter-form__reset">Сбросить</button>
-                        </div>
-                        <div class="filter-form__field-group">
-                            <input type="checkbox" name="gown" id="gown" class="filter-form__checkbox">
-                            <label for="gown" class="filter-form__label">Халаты</label>
-                        </div>
-                        <div class="filter-form__field-group">
-                            <input type="checkbox" name="surgical-suits" id="surgical-suits" class="filter-form__checkbox">
-                            <label for="surgical-suits" class="filter-form__label">Хиругрические костюмы</label>
-                        </div>
-                    </div>
-                    <button type="reset" class=" btn btn-main-outline">Сбросить все фильтры</button>
-<!--                 todo:   Возможно тут нужно выводить разные кнопки в зависимости от того применяются сейчас флитры на странице или нет, и если поставлены дополнитлье-->
-                </form>
-                <div class="popular-search">
-                    <p class="popular-search__title">Чаще всего ищут:</p>
-                    <a href="#!" class="popular-search__link">Недорогие белые халаты</a>
-                    <a href="#!" class="popular-search__link">Плотный белый халат</a>
-                </div>
 
-            </aside>
-        </div>
-        <!--        old    -->
+        </div><!-- .row -->
 
-
-
-    </div>
+    </div><!-- .container -->
 </main>
 <!-- .page__footer -->
 <include src="source/inc/global/footer.html" ></include>

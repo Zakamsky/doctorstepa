@@ -59,9 +59,11 @@ a{
 .btn{
   padding: 10px;
   min-width: 94px;
+  width: max-content;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
+  text-align: center;
   color: $color-light;
   border-radius: 19px;
   border: 1px solid $color-text-light;
@@ -101,6 +103,13 @@ a{
     color: $color-text;
     border-color: $color-text;
   }
+}
+
+.btn-link{
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 1px 6px;
 }
 
 .section-title{
