@@ -1,25 +1,94 @@
 .sort-form{
   display: none;
-  &.open{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: $color-light;
-    z-index: 999;
+  font-weight: 500;
+  padding-bottom: 20px;
+  @include media-breakpoint-down(md){
+    &.open{
+      display: block;
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      right: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border: 1px solid #E5E5E5;
+      border-radius: 20px;
+      background: $color-light;
+      z-index: 999;
+
+    }
+    .open &__btn-close{
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      padding: 25px;
+    }
+    .open &__field-group{
+      width: 100%;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      text-align: center;
+      border-top: 1px solid #C4C4C4;
+      &--only-sale{
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
   @include media(lg){
     display: block;
   }
+
   &__form{
     display: flex;
+    flex-direction: column;
     align-items: center;
+    @include media(lg){
+      flex-direction: row;
+    }
   }
   &__select{
-    padding: 14px 15px;
+    padding: 10px 15px;
     border: 1px solid $color-text;
     box-sizing: border-box;
     border-radius: 20px;
+    font-weight: 500;
+  }
+  &__field-group{
+    margin: 0;
+    padding: 10px 0;
+    @include media(lg){
+      border: none;
+      &--on-page{
+        margin-left: 20px;
+      }
+      &--only-sale{
+        margin-left: auto;
+      }
+    }
+
+    .select2-container{
+      width: auto !important;
+      .select2-selection--single{
+        height: auto;
+        padding: 11px 30px 11px 15px;
+        border: 1px solid $color-text;
+        box-sizing: border-box;
+        border-radius: 20px !important;
+        .select2-selection__rendered{
+          padding: 0;
+          line-height: 1.1;
+        }
+        .select2-selection__arrow{
+          height: 100%;
+          width: 30px;
+        }
+      }
+    }
+
+  }
+  &__label{
+    font-weight: 500;
+    color: $color-text
   }
 }

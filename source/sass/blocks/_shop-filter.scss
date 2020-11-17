@@ -59,6 +59,10 @@
   }
   &__field-group{
     padding: 10px 6px;
+
+    &:focus-within{
+      outline: 1px solid $color-text-light;
+    }
   }
   &__label{
     position: relative;
@@ -66,6 +70,7 @@
     display: flex;
     align-items: center;
     color: $color-text-light;
+
   }
   [type="checkbox"] + &__label::before{
     content: '';
