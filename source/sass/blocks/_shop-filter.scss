@@ -120,5 +120,10 @@
     color: #808D9A;
     background: rgba(128, 141, 154, 0.06);
     border-radius: 15px;
+    &:hover{
+      color: $color-light;
+      text-decoration: none;
+      background: $color-accent;
+    }
   }
 }

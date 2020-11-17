@@ -25,8 +25,9 @@
 
         <div class="mobile-catalog-controls d-flex d-lg-none">
             <button type="button" class="mobile-catalog-controls__btn js-filter-opener">Фильтры</button>
-            <button type="button" class="mobile-catalog-controls__btn mobile-catalog-controls__btn--select">Популярные</button>
-            <button type="button" class="mobile-catalog-controls__btn mobile-catalog-controls__btn--more" aria-label="дополнительные опции сортировки"></button>
+            <button type="button" class="mobile-catalog-controls__btn js-sorter-opener">Сортировка</button>
+<!--            <button type="button" class="mobile-catalog-controls__btn mobile-catalog-controls__btn&#45;&#45;select">Популярные</button>-->
+<!--            <button type="button" class="mobile-catalog-controls__btn mobile-catalog-controls__btn&#45;&#45;more" aria-label="дополнительные опции сортировки"></button>-->
         </div>
         <div class="row position-relative">
 
@@ -34,8 +35,9 @@
 
             <main class="product-page col-lg-9">
 
-                <div class="product-page__sorting d-none d-lg-block">
+                <div class="product-page__sorting">
                     <include src="source/inc/blocks/sort-form.html"></include>
+                    <include src="source/inc/blocks/subcategories-field.html"></include>
 
                 </div>
                 <div class="product-page__products">

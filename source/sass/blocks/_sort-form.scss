@@ -1,4 +1,21 @@
 .sort-form{
+  display: none;
+  &.open{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $color-light;
+    z-index: 999;
+  }
+  @include media(lg){
+    display: block;
+  }
+  &__form{
+    display: flex;
+    align-items: center;
+  }
   &__select{
     padding: 14px 15px;
     border: 1px solid $color-text;

@@ -260,15 +260,30 @@ jQuery( document ).ready(function( $ ) {
     const filterButton = document.querySelector('.js-filter-opener');
     const filterBlock = document.querySelector('.js-filter-open');
     const filterCloseButton = document.querySelector('.js-filter-close');
+    //соритровка в каталоге переключения на мобилке js-sorter-opener
+    const sorterButton = document.querySelector('.js-sorter-opener');
+    const sorterBlock = document.querySelector('.js-sort-form');
+    const sorterCloseButton = document.querySelector('.js-sorter-close');
 
     const filterOpen = function(){
         filterButton.classList.toggle('active')
         filterBlock.classList.toggle('open')
+        sorterBlock.classList.remove('open')
+
     };
     const filterClose = function(){
         filterBlock.classList.remove('open')
         filterButton.classList.remove('active')
+    };
+    const sorterOpen = function(){
+        sorterButton.classList.toggle('active')
+        sorterBlock.classList.toggle('open')
+        filterBlock.classList.remove('open')
 
+    };
+    const sorterClose = function(){
+        sorterButton.classList.remove('open')
+        sorterBlock.classList.remove('active')
     };
 
     filterButton.addEventListener('click', event => {
@@ -279,5 +294,32 @@ jQuery( document ).ready(function( $ ) {
         filterClose()
     });
 
+    sorterButton.addEventListener('click', event => {
+        console.log('this')
+        sorterOpen()
+    });
+
+    sorterCloseButton.addEventListener('click', event => {
+        sorterClose()
+    });
+
+
+
+
+
+    //блок ссылок на субкатегории в каталоге
+    const subcategoriesField = document.querySelector('.js-subcategories-field');
+    const subcategoriesFieldCloseBtn = document.querySelector('.js-subcategories-field-close');
+    const subcategoriesFieldOpenBtn = document.querySelector('.js-subcategories-field-open');
+
+    if (subcategoriesField){
+        subcategoriesFieldOpenBtn.addEventListener('click', event => {
+            subcategoriesField.classList.add('open');
+        });
+
+        subcategoriesFieldCloseBtn.addEventListener('click', evt => {
+            subcategoriesField.classList.remove('open');
+        });
+    }
 
 });

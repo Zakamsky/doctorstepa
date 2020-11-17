@@ -1,21 +1,27 @@
-<form class="sort-form">
-    <label >
-        <select name="sort" class="sort-form__select js-select2" >
-            <option value="По популярности">По популярности</option>
-            <option value="По цене">По цене</option>
-            <option value="По рейтингу">По рейтингу</option>
-        </select>
-    </label>
-    <label>
-        На странице
-        <select name="num-on-page" class="sort-form__select js-select2" >
-            <option value="12">12</option>
-            <option value="18">18</option>
-            <option value="24">24</option>
-        </select>
-    </label>
-    <div class="filter-form__field-group">
-        <input type="checkbox" name="only-sale" id="only-sale" class="filter-form__checkbox visually-hidden">
-        <label for="only-sale" class="filter-form__label">Только акционные</label>
-    </div>
-</form>
+<div class="sort-form js-sort-form">
+
+    <button type="button" class="sort-form__btn-close btn-link d-block d-lg-none js-sorter-close">Назад</button>
+
+    <form class="sort-form__form">
+        <label >
+            <select name="sort" class="sort-form__select js-select2" >
+                <option value="По популярности">По популярности</option>
+                <option value="По цене">По цене</option>
+                <option value="По рейтингу">По рейтингу</option>
+            </select>
+        </label>
+        <label>
+            На странице
+            <select name="num-on-page" class="sort-form__select js-select2" >
+                <option value="12">12</option>
+                <option value="18">18</option>
+                <option value="24">24</option>
+            </select>
+        </label>
+        <div class="filter-form__field-group">
+            <input type="checkbox" name="only-sale" id="only-sale" class="filter-form__checkbox visually-hidden">
+            <label for="only-sale" class="filter-form__label">Только акционные</label>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,52 @@
+.subcategories-field{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 20px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);;
+  &__link{
+    display: inline-block;
+    margin: 10px;
+    width: max-content;
+    padding: 9px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #808D9A;
+    background: rgba(128, 141, 154, 0.06);
+    border-radius: 15px;
+    &:hover{
+      color: $color-light;
+      text-decoration: none;
+      background: $color-accent;
+    }
+    &--hiding{
+      display: none;
+    }
+  }
+  &__btn{
+    display: block;
+    align-self: center;
+    padding: 0;
+    margin-left: auto;
+    color: $color-text-light;
+    //text-decoration: underline;
+    border-bottom: 1px solid $color-text-light;
+    &--close{
+      display: none;
+    }
+  }
+  &.open{
+    .subcategories-field__link--hiding{
+      display: inline-block;
+    }
+    .subcategories-field__btn--show-more{
+      display: none;
+    }
+    .subcategories-field__btn--close{
+      display: block;
+    }
+  }
+}
