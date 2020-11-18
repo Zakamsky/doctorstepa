@@ -282,8 +282,8 @@ jQuery( document ).ready(function( $ ) {
 
     };
     const sorterClose = function(){
-        sorterButton.classList.remove('open')
-        sorterBlock.classList.remove('active')
+        sorterBlock.classList.remove('open')
+        sorterButton.classList.remove('active')
     };
 
     filterButton.addEventListener('click', event => {
@@ -295,7 +295,6 @@ jQuery( document ).ready(function( $ ) {
     });
 
     sorterButton.addEventListener('click', event => {
-        console.log('this')
         sorterOpen()
     });
 

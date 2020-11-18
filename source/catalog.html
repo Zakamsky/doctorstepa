@@ -44,10 +44,18 @@
                     <include src="source/inc/blocks/products-row.html"></include>
                 </div>
 
-                <div class="product-page__navigation">
-                    <ul class="pagination">
+                <div class="product-page__navigation pagination">
+
+                    <a class="pagination__arrow pagination__arrow--prev" aria-label="prev">
+<!--                    todo: нерабочая кнопка просото без атрибута хреф-->
+                        <span class="visually-hidden">Предыдущая страница</span>
+                    </a>
+
+                    <ul class="pagination__list">
                         <li class="pagination__item">
-                            <a href="#!" class="pagination__link" aria-label="страница 1">1 </a>
+                            <a class="pagination__link active" aria-label="страница 1">1 </a>
+                            <!--                    todo: нерабочая кнопка просото без атрибута хреф-->
+
                         </li>
                         <li class="pagination__item">
                             <a href="#!" class="pagination__link" aria-label="страница 2">2 </a>
@@ -55,25 +63,29 @@
                         <li class="pagination__item">
                             <a href="#!" class="pagination__link" aria-label="страница 3">3 </a>
                         </li>
-                        <li class="pagination__item">
+                        <li class="pagination__item  d-none d-lg-flex">
                             <a href="#!" class="pagination__link" aria-label="страница 4">4 </a>
                         </li>
-                        <li class="pagination__item">
+                        <li class="pagination__item  d-none d-lg-flex">
                             <a href="#!" class="pagination__link" aria-label="страница 5">5 </a>
                         </li>
                         <li class="pagination__item">
-                            ...
+                            <span class="pagination__link">
+                                ...
+                            </span>
+
                         </li>
                         <li class="pagination__item">
-                            <a href="#!" class="pagination__link" aria-label="страница 9">9 </a>
+                            <a href="#!" class="pagination__link" aria-label="страница 9">10 </a>
                         </li>
                         <li class="pagination__item">
-                            <a href="#!" class="pagination__link" aria-label="страница 10">10 </a>
+                            <a href="#!" class="pagination__link" aria-label="страница 10">12 </a>
                         </li>
                     </ul>
 
-                    <a href="#!" class="arrows-links arrows-links--prev" aria-label="prev"></a>
-                    <a href="#!" class="arrows-links arrows-links--next" aria-label="next"></a>
+                    <a href="#!" class="pagination__arrow pagination__arrow--next" aria-label="next">
+                        <span class="visually-hidden">Следующая страница</span>
+                    </a>
 
                 </div>
 
