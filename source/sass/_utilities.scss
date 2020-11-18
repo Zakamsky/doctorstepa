@@ -81,6 +81,8 @@ a{
   background-color: $color-accent;
   border-color: $color-accent;
   &:hover{
+    color: $color-light;
+    text-decoration: none;
     background-color: $color-accent-hover;
     border-color: $color-accent-hover;
   }
@@ -91,6 +93,7 @@ a{
   border-color: $color-accent;
   &:hover{
     color: $color-text;
+    text-decoration: none;
     border-color: $color-accent-hover;
   }
 }
