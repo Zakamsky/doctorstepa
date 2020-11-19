@@ -1,13 +1,13 @@
 <aside class="shop-filter col-lg-3 d-none d-lg-block js-filter-open">
     <div class="filter-header">
         <h2 class="filter-header__title d-none d-lg-block m-0">Фильтр товаров</h2>
-        <button type="button" class="filter-header__btn filter-header__btn--reset btn-link">
+        <button type="reset" class="filter-header__btn filter-header__btn--reset btn-link" form="filter-form">
             Сбросить
             <span class="d-lg-none">все</span>
         </button>
         <button type="button" class="filter-header__btn filter-header__btn-close btn-link d-block d-lg-none js-filter-close">Назад</button>
     </div>
-    <form action="catalog.html/" method="get" class="filter-form">
+    <form action="catalog.html/" method="get" class="filter-form" id="filter-form">
         <div class="filter-form__group">
             <div class="filter-form__header">
                 <p class="filter-form__heading">Тип товара</p>

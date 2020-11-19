@@ -202,6 +202,24 @@ jQuery( document ).ready(function( $ ) {
         ]
     });
 
+    //слайдер покупатели в халатах js-customers-photo-grid
+    $('.js-customers-photo-grid').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
+        dots: false,
+        arrows: false,
+        mobileFirst: true,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: "unslick"
+            }
+        ]
+    });
+
     //слайдер новинки
     $('.js-products-new-row').slick({
         infinite: true,

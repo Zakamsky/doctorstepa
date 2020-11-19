@@ -1,0 +1,82 @@
+.customers-photo{
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(45%, 1fr));
+    grid-auto-rows: minmax(180px,auto);
+    grid-gap: 20px;
+    list-style: none;
+    padding: 0;
+    @include media(xl){
+      grid-template-columns: repeat(auto-fit,minmax(175px, auto));
+      grid-auto-rows: 180px;
+      grid-gap: 20px 30px;
+    }
+  }
+  &__item{
+    display: inline-block;
+    &--high{
+      grid-row: span 2;
+    }
+    &--wide{
+      .customers-photo__pic-wrapper{
+        Width: 328px;
+      }
+      @include media(xl){
+        grid-column: span 2;
+        .customers-photo__pic-wrapper{
+          Width: 100%;
+        }
+      }
+
+    }
+    &:hover .customers-photo__pic-wrapper{
+      filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.25));
+    }
+  }
+  &__link{
+    display: block;
+    position: relative;
+    height: 100%;
+    //Width: 154px;
+  }
+  &__pic-wrapper{
+    display: block;
+    Width: 154px;
+    Height: 212px;
+    border-radius: 20px;
+    overflow: hidden;
+    @include transition-my;
+    @include media(xl){
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__pic{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__date{
+    margin-top: 13px;
+    font-style: italic;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+    @include media(xl){
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      margin: 0;
+      &--text-light{
+        color: $color-light;
+      }
+    }
+  }
+  .slick-initialized.slick-slider{
+    .slick-slide{
+      margin-right: 20px;
+    }
+  }
+
+}
+
