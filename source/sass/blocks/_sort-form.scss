@@ -59,12 +59,23 @@
     padding: 10px 0;
     @include media(lg){
       border: none;
+      padding-top: 0;
+      &--sort{
+        margin-right: 1rem;
+        .select2-selection--single{
+          width: 277px;
+        }
+      }
       &--on-page{
         margin-left: 20px;
+        .select2-selection--single{
+          width: 80px;
+        }
       }
       &--only-sale{
         margin-left: auto;
       }
+
     }
 
     .select2-container{

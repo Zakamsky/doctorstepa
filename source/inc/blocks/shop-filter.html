@@ -1,5 +1,5 @@
-<aside class="shop-filter col-lg-3 d-none d-lg-block js-filter-open">
-    <div class="filter-header">
+<aside class="shop-filter col-lg-3 js-filter-open">
+    <div class="shop-filter__header filter-header">
         <h2 class="filter-header__title d-none d-lg-block m-0">Фильтр товаров</h2>
         <button type="reset" class="filter-header__btn filter-header__btn--reset btn-link" form="filter-form">
             Сбросить
@@ -7,7 +7,7 @@
         </button>
         <button type="button" class="filter-header__btn filter-header__btn-close btn-link d-block d-lg-none js-filter-close">Назад</button>
     </div>
-    <form action="catalog.html/" method="get" class="filter-form" id="filter-form">
+    <form class="shop-filter__main filter-form" action="catalog.html/" method="get" id="filter-form">
         <div class="filter-form__group">
             <div class="filter-form__header">
                 <p class="filter-form__heading">Тип товара</p>
@@ -59,7 +59,7 @@
             </div>
         </div>
     </form>
-    <div class="popular-search">
+    <div class="shop-filter__footer popular-search">
         <p class="popular-search__title">Чаще всего ищут:</p>
         <a href="#!" class="popular-search__link">Недорогие белые халаты</a>
         <a href="#!" class="popular-search__link">Плотный белый халат</a>

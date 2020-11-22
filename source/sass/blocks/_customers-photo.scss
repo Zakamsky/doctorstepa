@@ -1,4 +1,10 @@
 .customers-photo{
+  &__title{
+    margin-bottom: 29px;
+    @include media(lg){
+      margin-bottom: 40px;
+    }
+  }
   &__grid{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(45%, 1fr));

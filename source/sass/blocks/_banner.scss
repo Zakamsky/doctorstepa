@@ -143,4 +143,74 @@
       }
     }
   }
+  &--callback{
+    padding: 63px 20px;
+    //border-radius: 40px;
+    @include media(md){
+      padding-bottom: 0;
+    }
+    @include media(lg){
+      padding: 0 38px 0 0;
+    }
+    .banner__content{
+      padding: 0 ;
+      text-align: center;
+      @include media(md){
+        padding-left: 20px;
+        padding-bottom: 40px;
+        text-align: left;
+      }
+      @include media(lg){
+        padding: 106px 0 20px 40px;
+      }
+    }
+    .banner__title{
+      font-size: 38px;
+      margin-top: 5px;
+      margin-bottom: 16px;
+    }
+    .banner__subtitle{
+      font-weight: 700;
+    }
+    .banner__text{
+      display: block;
+      font-size: 12px;
+      @include media(lg){
+        font-size: 14px;
+      }
+    }
+    .btn{
+      margin-top: 18px;
+      padding: 16px 32px;
+      margin-bottom: 37px;
+      @include media(lg){
+        margin-top: 0;
+      }
+    }
+    .socials{
+      justify-content: center;
+      margin-top: 23px;
+      margin-bottom: 8px;
+      @include media(md){
+        justify-content: flex-start;
+      }
+    }
+    .banner__pic{
+      display: none;
+      @include media(md){
+        display: block;
+        margin-top: auto;
+        width: 40%;
+        height: auto;
+        &:before{
+          top: 51px;
+          right: 0;
+        }
+      }
+      @include media(xl){
+        width: 443px;
+        height: 539px;
+      }
+    }
+  }
 }

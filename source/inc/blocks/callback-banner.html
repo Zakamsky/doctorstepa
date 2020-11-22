@@ -1,4 +1,4 @@
-<div class="banner banner--wide">
+<div class="banner banner--callback">
     <div class="banner__content">
         <p class="banner__subtitle">
             Не нашли, что искали?
@@ -9,22 +9,33 @@
         <p class="banner__text">
             Быстро ответим на все вопросы и поможем сориентироваться в ассортименте
         </p>
-        <a href="#!" class="btn btn-main">Подробнее</a>
+        <a href="#!" class="btn btn-main">Позвонить нам</a>
         <p lass="banner__text">
             Или напишите нам в мессенджерах
         </p>
-        <include src="source/inc/blocks/socials.html"
-                 locals='{
-                            "size": "35"
-                        }'>
-        </include>
+        <ul class="socials">
+            <li class="socials__item" >
+                <a href="#!" class="socials__link socials__link--vk">
+                    <svg class="socials__icon" width="35" height="35" fill="none">
+                        <use xlink:href="img/sprite.svg#icon-vk"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="socials__item">
+                <a href="#!" class="socials__link socials__link--whatsapp">
+                    <svg class="socials__icon" width="35" height="35" fill="none">
+                        <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
     </div>
     <div class="banner__pic">
         <include src="source/inc/utils/picture.html"
                  locals='{
                         "name": "callback-slider",
                         "ext": "png",
-                        "width": "269",
+                        "width": "440",
                         "height": "541",
                         "class": "banner__img",
                         "alt": ""

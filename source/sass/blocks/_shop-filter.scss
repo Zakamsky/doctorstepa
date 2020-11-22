@@ -1,4 +1,8 @@
 .shop-filter{
+  display: none;
+  &__header{
+    border-bottom: 1px solid #e5e5e5;
+  }
   @include media-breakpoint-down(md){
     &.open{
       display: block !important;
@@ -13,6 +17,25 @@
       z-index: 999;
     }
   }
+  @include media-breakpoint-up(md){
+    display: block;
+    &__header,
+    &__main,
+    &__footer{
+      padding-left: 13px;
+      padding-right: 13px;
+      background-color: $color-light;
+    }
+    &__header{
+      border-radius: 20px 20px 0 0;
+      border-bottom: none;
+      background-color: $color-accent-light;
+    }
+    &__footer{
+      border-radius: 0 0 20px 20px;
+    }
+
+  }
 }
 
 .filter-header{
@@ -20,6 +43,9 @@
   justify-content: space-between;
   padding-top: 29px;
   padding-bottom: 19px;
+  @include media(md){
+    padding-top: 24px;
+  }
   &__title{
     font-weight: 500;
     font-size: 18px;
@@ -34,9 +60,9 @@
   }
 }
 .filter-form{
-  &__group{
+  &__group {
     padding: 1rem 0;
-    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
   }
   &__header{
     display: flex;
@@ -106,13 +132,17 @@
 }
 .popular-search{
   padding: 1rem 6px 2rem;
-  border-top: 1px solid #e5e5e5;
+  @include media-breakpoint-up(md){
+    padding-left: 13px;
+    padding-right: 13px;
+  }
   &__title{
     margin-top: 7px;
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
+
   }
   &__link{
     display: block;

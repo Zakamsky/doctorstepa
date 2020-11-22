@@ -62,6 +62,13 @@
     .rub-ico{
       max-height: 1em;
     }
+    .btn{
+      display: block;
+      margin: 0 auto;
+      @include media-breakpoint-up(md){
+        margin: 0;
+      }
+    }
   }
   &__title{
     padding-top: 6px;
