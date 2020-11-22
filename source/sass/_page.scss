@@ -93,3 +93,12 @@ html{
   }
 
 }
+.single-product{
+  &__banner,
+  &__slider{
+    margin-top: 65px;
+    @include media(lg){
+      margin-top: 139px;
+    }
+  }
+}

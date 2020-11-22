@@ -255,6 +255,25 @@ jQuery( document ).ready(function( $ ) {
         ]
     });
 
+    //слайдер изображений товара
+    $('.js-main-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.js-nav-slider'
+    });
+    $('.js-nav-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.js-main-slider',
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-arrow-vertical slick-arrow-vertical--prev"><span class="visually-hidden">Предыдущий</span></button>',
+        nextArrow: '<button type="button" class="slick-arrow-vertical slick-arrow-vertical--next"><span class="visually-hidden">Следующий</span></button>',
+        dots: false,
+        focusOnSelect: true,
+        vertical: true
+    });
 
     //футер меню
     const footerSwitchers = document.querySelectorAll('.js-footer-switcher');
@@ -304,21 +323,24 @@ jQuery( document ).ready(function( $ ) {
         sorterButton.classList.remove('active')
     };
 
-    filterButton.addEventListener('click', event => {
-        filterOpen()
-    });
+    if(filterButton || sorterButton ){
+        filterButton.addEventListener('click', event => {
+            filterOpen()
+        });
 
-    filterCloseButton.addEventListener('click', event => {
-        filterClose()
-    });
+        filterCloseButton.addEventListener('click', event => {
+            filterClose()
+        });
 
-    sorterButton.addEventListener('click', event => {
-        sorterOpen()
-    });
+        sorterButton.addEventListener('click', event => {
+            sorterOpen()
+        });
 
-    sorterCloseButton.addEventListener('click', event => {
-        sorterClose()
-    });
+        sorterCloseButton.addEventListener('click', event => {
+            sorterClose()
+        });
+    }
+
 
 
 

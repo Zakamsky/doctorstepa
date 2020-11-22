@@ -33,4 +33,10 @@
       text-decoration: none;
     }
   }
+
+  &--accent{
+    .breadcrumbs__item:last-child .breadcrumbs__link{
+      color: $color-accent;
+    }
+  }
 }

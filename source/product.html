@@ -1,0 +1,103 @@
+<!-- body.page -->
+<!-- .page__header -->
+<include src="source/inc/global/header.html"
+         locals='{
+            "title": "Доктор Степа | Интернет-магазин медицинской одежды"
+        }'>
+</include>
+<!-- / .page__header -->
+<main class="page__content">
+    <div class="container">
+        <ul class="breadcrumbs breadcrumbs--accent">
+            <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="#!" class="breadcrumbs__link">Каталог</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link">Купить медицинский халат</a>
+                <!--  предполагаю что тут будет цикл, у последней ссылки на текущую страницу надо прсото убрать href -->
+            </li>
+        </ul>
+
+        <h1 class="page__title section-title">Белый халат с красными вставками</h1>
+
+        <main class="single-product">
+
+            <div class="single-product__grid-wrapper">
+                <div class="single-product__image-block">
+                    <include src="source/inc/blocks/single-product-images.html"></include>
+                </div>
+                <div class="single-product__action-block">
+                    <include src="source/inc/blocks/single-product-actions.html"></include>
+                </div>
+                <div class="single-product__description-block">
+                    <include src="source/inc/blocks/single-product-description.html"></include>
+                </div>
+
+                <!--  <div class="product-page__navigation pagination">
+
+                      <a class="pagination__arrow pagination__arrow&#45;&#45;prev" aria-label="prev">
+      &lt;!&ndash;                    todo: нерабочая кнопка просото без атрибута хреф&ndash;&gt;
+                          <span class="visually-hidden">Предыдущая страница</span>
+                      </a>
+
+                      <ul class="pagination__list">
+                          <li class="pagination__item">
+                              <a class="pagination__link active" aria-label="страница 1">1 </a>
+                              &lt;!&ndash;                    todo: нерабочая кнопка просото без атрибута хреф&ndash;&gt;
+
+                          </li>
+                          <li class="pagination__item">
+                              <a href="#!" class="pagination__link" aria-label="страница 2">2 </a>
+                          </li>
+                          <li class="pagination__item">
+                              <a href="#!" class="pagination__link" aria-label="страница 3">3 </a>
+                          </li>
+                          <li class="pagination__item  d-none d-lg-flex">
+                              <a href="#!" class="pagination__link" aria-label="страница 4">4 </a>
+                          </li>
+                          <li class="pagination__item  d-none d-lg-flex">
+                              <a href="#!" class="pagination__link" aria-label="страница 5">5 </a>
+                          </li>
+                          <li class="pagination__item">
+                              <span class="pagination__link">
+                                  ...
+                              </span>
+
+                          </li>
+                          <li class="pagination__item">
+                              <a href="#!" class="pagination__link" aria-label="страница 9">10 </a>
+                          </li>
+                          <li class="pagination__item">
+                              <a href="#!" class="pagination__link" aria-label="страница 10">12 </a>
+                          </li>
+                      </ul>
+
+                      <a href="#!" class="pagination__arrow pagination__arrow&#45;&#45;next" aria-label="next">
+                          <span class="visually-hidden">Следующая страница</span>
+                      </a>
+
+                  </div>-->
+            </div>
+
+
+            <section class="single-product__banner banner-callback">
+                <include src="source/inc/blocks/callback-banner.html"></include>
+            </section>
+
+            <section class="single-product__slider products">
+                <include src="source/inc/blocks/products-slider.html"
+                         locals='{
+                    "title": "Вас может заинтересовать"
+                }'></include>
+            </section>
+            </main>
+
+    </div><!-- .container -->
+</main>
+<!-- .page__footer -->
+<include src="source/inc/global/footer.html" ></include>
+<!-- / .page__footer-->
+<!-- / body.page -->

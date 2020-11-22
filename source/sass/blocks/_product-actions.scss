@@ -1,0 +1,52 @@
+.product-actions{
+  display: flex;
+  flex-direction: column;
+  &__price{
+    @include media(md){
+      order: -1;
+    }
+    .current{
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .old{
+      font-weight: 500;
+      font-size: 14px;
+      color: $color-text-light;
+    }
+    .rub-ico{
+      height: 1em;
+
+    }
+  }
+  &__star-rating{
+
+  }
+}
+
+.star-rating{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: $color-accent-light;
+  @include media(md){
+    flex-direction: row;
+    align-items: baseline;
+  }
+  &__stars{
+    margin-bottom: 10px;
+    @include media(md){
+      margin-bottom: 0;
+      margin-right: 1em;
+    }
+  }
+  .star-icon{
+    color: $color-accent-light;
+    &--fill{
+      color: $color-accent;
+    }
+  }
+}

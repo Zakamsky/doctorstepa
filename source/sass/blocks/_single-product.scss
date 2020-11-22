@@ -1,0 +1,34 @@
+$gap: 30px;
+
+.single-product{
+  &__grid-wrapper{
+    display: grid;
+
+    grid-gap: $gap;
+    @include media(lg){
+      grid-template-columns: repeat( 2, calc((100% - #{$gap}) / 2) );
+    }
+  }
+  &__image-block,
+  &__description-block{
+    grid-column: 1 / 2;
+  }
+  &__action-block{
+    //padding: 16px;
+    @include media(lg){
+      grid-column: 2 / -1;
+      position: sticky;
+      top: 0;
+      min-height: 500px;
+      padding: 60px 50px;
+      box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+      border-radius: 20px;
+      background: #FFFFFF;
+    }
+  }
+
+}
+
+
+
+.product-actions{}
