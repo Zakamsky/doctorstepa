@@ -341,7 +341,33 @@ jQuery( document ).ready(function( $ ) {
         });
     }
 
+    // кнопки + и - на кол-ве товара, в форме товара
+    const amountWrapper = $('.js-amount');
+    if (amountWrapper){
 
+        $(function() {
+            amountWrapper.prepend('<button type="button" class="amount__btn amount__btn--minus" aria-hidden="true"></button>');
+            amountWrapper.append('<button type="button" class="amount__btn amount__btn--plus" aria-hidden="true"></button>');
+
+            $(".amount__btn").on("click", function() {
+                const $button = $(this);
+                let oldValue = $button.parent().find('.amount__input').val();
+                let newVal = 1;
+                if ($button.hasClass( 'amount__btn--plus' )) {
+
+                    newVal = parseFloat(oldValue) + 1;
+                } else {
+
+                    if (oldValue > 1) {
+                        newVal = parseFloat(oldValue) - 1;
+                    } else {
+                        newVal = 1;
+                    }
+                }
+                $button.parent().find(".amount__input").val(newVal);
+            });
+        });
+    }
 
 
 
