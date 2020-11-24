@@ -20,35 +20,36 @@
 @import "footer";
 
 //styles for BEM blocks:
-@import "blocks/top-bar";
-@import "blocks/middle-bar";
-@import "blocks/bottom-bar";
-@import "blocks/location";
-@import "blocks/login-link";
-@import "blocks/socials";
-@import "blocks/contacts";
-@import "blocks/searchform";
-@import "blocks/banner";
-@import "blocks/narrow-banner";
-@import "blocks/features";
-@import "blocks/products-slider";
-@import "blocks/pop-categories";
-@import "blocks/breadcrumbs";
-@import "blocks/categories";
-@import "blocks/brands";
-@import "blocks/for-whom";
-// catalog page
-@import "blocks/mobile-catalog-controls";
-@import "blocks/shop-filter";
-@import "blocks/sort-form";
-@import "blocks/subcategories-field";
-@import "blocks/pagination";
-@import "blocks/customers-photo";
-// single-product page
-@import "blocks/single-product";
-@import "blocks/product-images";
-@import "blocks/product-descriptions";
-@import "blocks/product-actions";
+//@import "blocks/top-bar";
+//@import "blocks/middle-bar";
+//@import "blocks/bottom-bar";
+//@import "blocks/location";
+//@import "blocks/login-link";
+//@import "blocks/socials";
+//@import "blocks/contacts";
+//@import "blocks/searchform";
+//@import "blocks/banner";
+//@import "blocks/narrow-banner";
+//@import "blocks/features";
+//@import "blocks/products-slider";
+//@import "blocks/pop-categories";
+//@import "blocks/breadcrumbs";
+//@import "blocks/categories";
+//@import "blocks/brands";
+//@import "blocks/for-whom";
+//// catalog page
+//@import "blocks/mobile-catalog-controls";
+//@import "blocks/shop-filter";
+//@import "blocks/sort-form";
+//@import "blocks/subcategories-field";
+//@import "blocks/pagination";
+//@import "blocks/customers-photo";
+//// single-product page
+//@import "blocks/single-product";
+//@import "blocks/product-images";
+//@import "blocks/product-descriptions";
+//@import "blocks/product-actions";
+@import "blocks/*.scss";
 
 
 @import "blocks/footer-nav";

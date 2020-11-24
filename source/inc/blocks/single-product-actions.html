@@ -22,6 +22,7 @@
         <span class="star-rating__amount">(5 отзывов)&nbsp;&nbsp;28&nbsp;Заказов</span>
 
     </div>
+
     <div class="product-actions__price">
             <span class="current text-main">
                 12 000
@@ -36,6 +37,181 @@
             </svg>
         </del>
     </div>
+
+    <form action="" class="product-actions__form buy-form">
+        <fieldset class="buy-form__field-group">
+            <legend class="buy-form__field-title">
+                Цвет:
+            </legend>
+            <div class="buy-form__field-row buy-form__field-row--colors">
+<!--                todo: стили в custom-input-color.scss для светлых цветов добавить класс модификтаор color&#45;&#45;light (см. пример это добавит обводку)-->
+                <include src="source/inc/utils/custom-input-color.html"
+                         locals='{
+                        "text": "белый",
+                        "color": "#ffff",
+                        "class": "color color--light",
+                        "type": "radio",
+                        "name": "color",
+                        "value": "white"
+                }'></include>
+                <include src="source/inc/utils/custom-input-color.html"
+                         locals='{
+                        "text": "зеленый",
+                        "color": "#27AE60",
+                        "class": "color",
+                        "type": "radio",
+                        "name": "color",
+                        "value": "green"
+                }'></include>
+                <include src="source/inc/utils/custom-input-color.html"
+                         locals='{
+                        "text": "голубой",
+                        "color": "#2D9CDB",
+                        "class": "color",
+                        "type": "radio",
+                        "name": "color",
+                        "value": "blue"
+                }'></include>
+                <include src="source/inc/utils/custom-input-color.html"
+                         locals='{
+                        "text": "серый",
+                        "color": "#333333",
+                        "class": "color",
+                        "type": "radio",
+                        "name": "color",
+                        "value": "dark"
+                }'></include>
+                <include src="source/inc/utils/custom-input-color.html"
+                         locals='{
+                        "text": "светло серый",
+                        "color": "#808D9A",
+                        "class": "color",
+                        "type": "radio",
+                        "name": "color",
+                        "value": "gray"
+                }'></include>
+                <include src="source/inc/utils/custom-input-color.html"
+                         locals='{
+                        "text": "слива",
+                        "color": "#9B51E0",
+                        "class": "color",
+                        "type": "radio",
+                        "name": "color",
+                        "value": "plum"
+                }'></include>
+                <include src="source/inc/utils/custom-input-color.html"
+                         locals='{
+                        "text": "светло зеленый",
+                        "color": "#6FCF97",
+                        "class": "color",
+                        "type": "radio",
+                        "name": "color",
+                        "value": "light-green"
+                }'></include>
+            </div>
+        </fieldset>
+        <fieldset class="buy-form__field-group">
+            <legend class="buy-form__field-title">
+                Размер:
+            </legend>
+            <div class="buy-form__field-row buy-form__field-row--sizes">
+                <include src="source/inc/utils/custom-input.html"
+                         locals='{
+                        "text": "40-42",
+                        "class": "size",
+                        "type": "radio",
+                        "name": "size",
+                        "value": "40-42"
+                }'></include>
+                <include src="source/inc/utils/custom-input.html"
+                         locals='{
+                        "text": "40-42",
+                        "class": "size",
+                        "type": "radio",
+                        "name": "size",
+                        "value": "42-44"
+                }'></include>
+                <include src="source/inc/utils/custom-input.html"
+                                                      locals='{
+                        "text": "44-46",
+                        "class": "size",
+                        "type": "radio",
+                        "name": "size",
+                        "value": "44-46"
+                }'></include>
+                <include src="source/inc/utils/custom-input.html"
+                         locals='{
+                        "text": "46-48",
+                        "class": "size",
+                        "type": "radio",
+                        "name": "size",
+                        "value": "46-48"
+                }'></include>
+                <include src="source/inc/utils/custom-input.html"
+                         locals='{
+                        "text": "48-50",
+                        "class": "size",
+                        "type": "radio",
+                        "name": "size",
+                        "value": "48-50"
+                }'></include>
+                <include src="source/inc/utils/custom-input.html"
+                         locals='{
+                        "text": "50-52",
+                        "class": "size",
+                        "type": "radio",
+                        "name": "size",
+                        "value": "50-52"
+                }'></include>
+                <include src="source/inc/utils/custom-input.html"
+                         locals='{
+                        "text": "52-54",
+                        "class": "size",
+                        "type": "radio",
+                        "name": "size",
+                        "value": "52-54"
+                }'></include>
+                <include src="source/inc/utils/custom-input.html"
+                         locals='{
+                        "text": "54-56",
+                        "class": "size",
+                        "type": "radio",
+                        "name": "size",
+                        "value": "54-56"
+                }'></include>
+                <include src="source/inc/utils/custom-input.html"
+                         locals='{
+                        "text": "56-58",
+                        "class": "size",
+                        "type": "radio",
+                        "name": "size",
+                        "value": "56-58"
+                }'></include>
+                <include src="source/inc/utils/custom-input.html"
+                         locals='{
+                        "text": "58-60",
+                        "class": "size",
+                        "type": "radio",
+                        "name": "size",
+                        "value": "58-60"
+                }'></include>
+            </div>
+        </fieldset>
+        <fieldset class="buy-form__field-group">
+            <legend class="buy-form__field-title buy-form__field-title--amount">
+                <span>Размер: (кол-во?)</span> <span class="buy-form__field-title-small">В наличие 38995шт.</span>
+            </legend>
+
+            <div class="buy-form__field-row buy-form__field-row--amount amount">
+                <button type="button" class="amount__btn amount__btn--minus" aria-hidden="true"></button>
+                <input type="number" class="amount__input" value="1" step="1" min="1">
+                <button type="button" class="amount__btn amount__btn--plus" aria-hidden="true"></button>
+            </div>
+
+        </fieldset>
+
+    </form>
+
 
 
 

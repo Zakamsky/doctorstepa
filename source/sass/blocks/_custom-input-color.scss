@@ -1,0 +1,16 @@
+.custom-input-color{
+  &__label{
+    width: 34px;
+    height: 34px;
+  }
+  &:hover &__label{
+    outline: 4px solid $color-accent-light;
+  }
+  &__input:checked+&__label{
+    outline: 4px solid $color-accent-lighted;
+
+  }
+  &.color--light &__label{
+    box-shadow: inset 0 0 0 1px rgba(65, 65, 74, 0.2);;
+  }
+}

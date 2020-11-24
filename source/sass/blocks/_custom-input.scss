@@ -1,0 +1,27 @@
+.inbox{
+  &__label{
+    width: 77px;
+    height: 32px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 32px;
+    text-align: center;
+    color: $color-text-light;
+    border: 1px solid $color-text-light;
+    border-radius: 10px;
+    @include media(md){
+      width: 92px;
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+  &:hover &__label{
+    color: $color-text;
+    border-color: $color-text;
+  }
+  &__input:checked+&__label{
+    color: $color-light;
+    background-color: $color-accent;
+    border-color: $color-accent;
+  }
+}

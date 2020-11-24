@@ -50,3 +50,84 @@
     }
   }
 }
+.buy-form{
+  &__field-row{
+    display: grid;
+    &--colors{
+      grid-template-columns: repeat(auto-fit, 34px);
+      grid-auto-rows: minmax(34px,auto);
+      grid-gap: 15px;
+    }
+    &--sizes{
+      grid-template-columns: repeat(auto-fit, 76px);
+      grid-auto-rows: minmax(32px,auto);
+      grid-gap: 10px 7px;
+      @include media(md){
+        grid-template-columns: repeat(auto-fit, 92px);
+        grid-auto-rows: minmax(40px,auto);
+        grid-gap: 10px 5px;
+      }
+    }
+    &--amount{
+      display: flex;
+    }
+  }
+  .amount{
+    &__input{
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      line-height: 28px;
+      background-color: $color-accent-light;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+      }
+
+      &[type=number] {
+        -moz-appearance:textfield; /* Firefox */
+      }
+    }
+    &__btn{
+      position: relative;
+      appearance: none;
+      padding: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid $color-text;
+      background-color: transparent;
+      &::before,
+      &::after{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        //content: '';
+        width: 44%;
+        height: .6px;
+        background-color: $color-text;
+      }
+      &--minus{
+        margin-right: 10px;
+        &:after{
+          content: '';
+        }
+      }
+      &--plus{
+        margin-left: 10px;
+        &:after{
+          content: '';
+        }
+        &:before{
+          content: '';
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
+
+    }
+  }
+}
