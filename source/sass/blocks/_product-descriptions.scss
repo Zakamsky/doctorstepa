@@ -1,1 +1,21 @@
-.product-descriptions{}
+.product-descriptions{
+  &__galery{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    @include media(xl){
+      margin-right: -21px;
+    }
+  }
+  &__galery-img{
+    height: 67px;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    @include media(xl){
+      height: 120px;
+      margin-right: 21px;
+      margin-bottom: 15px;
+    }
+  }
+
+}

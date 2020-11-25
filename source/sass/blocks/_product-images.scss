@@ -6,6 +6,10 @@
     padding: 0;
     list-style: none;
   }
+  &__main-slider:not(.slick-slider) .product-images__main-slide:not(:first-child),
+  &__nav-slider:not(.slick-slider){
+    display: none;
+  }
   &__main-slide{
     @include media-breakpoint-down(xs){
       position: relative;

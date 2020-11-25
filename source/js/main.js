@@ -276,7 +276,7 @@ jQuery( document ).ready(function( $ ) {
     });
 
     //футер меню
-    const footerSwitchers = document.querySelectorAll('.js-footer-switcher');
+    const footerSwitchers = document.querySelectorAll('.js-open-switcher');
     footerSwitchers.forEach(item => {
         item.addEventListener('click', event => {
             // event.target.classList.add('open')
