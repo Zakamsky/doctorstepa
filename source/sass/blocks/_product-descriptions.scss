@@ -19,3 +19,11 @@
   }
 
 }
+
+.faq{
+  &__question{
+    &.open{
+      outline: 3px solid darkorange;
+    }
+  }
+}

@@ -2,6 +2,7 @@
   &__label{
     width: 34px;
     height: 34px;
+    margin: 0;
   }
   &:hover &__label{
     outline: 4px solid $color-accent-light;
