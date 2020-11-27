@@ -78,24 +78,25 @@
 
     }
 
-    .select2-container{
-      width: auto !important;
-      .select2-selection--single{
-        height: auto;
-        padding: 11px 30px 11px 15px;
-        border: 1px solid $color-text;
-        box-sizing: border-box;
-        border-radius: 20px !important;
-        .select2-selection__rendered{
-          padding: 0;
-          line-height: 1.1;
-        }
-        .select2-selection__arrow{
-          height: 100%;
-          width: 30px;
-        }
-      }
-    }
+    //todo: delete this
+    //.select2-container{
+    //  width: auto !important;
+    //  .select2-selection--single{
+    //    height: auto;
+    //    padding: 11px 30px 11px 15px;
+    //    border: 1px solid $color-text;
+    //    box-sizing: border-box;
+    //    border-radius: 20px !important;
+    //    .select2-selection__rendered{
+    //      padding: 0;
+    //      line-height: 1.1;
+    //    }
+    //    .select2-selection__arrow{
+    //      height: 100%;
+    //      width: 30px;
+    //    }
+    //  }
+    //}
 
   }
   &__label{

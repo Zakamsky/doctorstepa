@@ -1,70 +1,72 @@
 <div class="product-descriptions">
-    <h2 class="product-descriptions__title">Описание</h2>
-    <p class="product-descriptions__text">
-        Элегантный медицинский халат из плотной ткани,
-        подходящей для холодного времени года.
-    </p>
-    <p class="product-descriptions__text">
-        Округлые линии кроя, наличие специальных
-        швов и вытачек придают фигуре необычайную
-        женственность. Отрезная линия акцентирует
-        внимание на талии, а универсальная длина
-        (ниже уровня колен) визуально вытягивает
-        силуэт и стройнит.
-    </p>
-    <p class="product-descriptions__text">
-        Халат базового кроя с характерным для
-        современных моделей воротником-стойкой,
-        рукавом ¾ и 2 боковыми карманами для
-        хранения мелких вещей. Ряд перламутровых
-        кнопок служит дополнительным украшением
-        модели.
-    </p>
-    <h3 class="product-descriptions__subtitle">Фото покупателей в наших халатах</h3>
-    <div class="product-descriptions__galery">
-        <include src="source/inc/utils/picture.html"
-                 locals='{
-                        "name": "galery-1",
-                        "ext": "jpg",
-                        "width": "",
-                        "height": "120",
-                        "class": "product-descriptions__galery-img",
-                        "alt": ""
-                    }'>
-        </include>
-        <include src="source/inc/utils/picture.html"
-                 locals='{
-                        "name": "galery-2",
-                        "ext": "jpg",
-                        "width": "",
-                        "height": "120",
-                        "class": "product-descriptions__galery-img",
-                        "alt": ""
-                    }'>
-        </include>
-        <include src="source/inc/utils/picture.html"
-                 locals='{
-                        "name": "galery-3",
-                        "ext": "jpg",
-                        "width": "",
-                        "height": "120",
-                        "class": "product-descriptions__galery-img",
-                        "alt": ""
-                    }'>
-        </include>
-        <include src="source/inc/utils/picture.html"
-                 locals='{
-                        "name": "galery-4",
-                        "ext": "jpg",
-                        "width": "",
-                        "height": "120",
-                        "class": "product-descriptions__galery-img",
-                        "alt": ""
-                    }'>
-        </include>
-    </div>
-    <div class="product-descriptions__faq">
-        <h2 class="product-descriptions__title">Вопрос — ответ</h2>
+    <section class="product-descriptions__description">
+        <h2 class="product-descriptions__title">Описание</h2>
+        <p class="product-descriptions__text">
+            Элегантный медицинский халат из плотной ткани,
+            подходящей для холодного времени года.
+        </p>
+        <p class="product-descriptions__text">
+            Округлые линии кроя, наличие специальных
+            швов и вытачек придают фигуре необычайную
+            женственность. Отрезная линия акцентирует
+            внимание на талии, а универсальная длина
+            (ниже уровня колен) визуально вытягивает
+            силуэт и стройнит.
+        </p>
+        <p class="product-descriptions__text">
+            Халат базового кроя с характерным для
+            современных моделей воротником-стойкой,
+            рукавом ¾ и 2 боковыми карманами для
+            хранения мелких вещей. Ряд перламутровых
+            кнопок служит дополнительным украшением
+            модели.
+        </p>
+        <h3 class="product-descriptions__subtitle">Фото покупателей в наших халатах</h3>
+        <div class="product-descriptions__galery">
+            <include src="source/inc/utils/picture.html"
+                     locals='{
+                            "name": "galery-1",
+                            "ext": "jpg",
+                            "width": "",
+                            "height": "120",
+                            "class": "product-descriptions__galery-img",
+                            "alt": ""
+                        }'>
+            </include>
+            <include src="source/inc/utils/picture.html"
+                     locals='{
+                            "name": "galery-2",
+                            "ext": "jpg",
+                            "width": "",
+                            "height": "120",
+                            "class": "product-descriptions__galery-img",
+                            "alt": ""
+                        }'>
+            </include>
+            <include src="source/inc/utils/picture.html"
+                     locals='{
+                            "name": "galery-3",
+                            "ext": "jpg",
+                            "width": "",
+                            "height": "120",
+                            "class": "product-descriptions__galery-img",
+                            "alt": ""
+                        }'>
+            </include>
+            <include src="source/inc/utils/picture.html"
+                     locals='{
+                            "name": "galery-4",
+                            "ext": "jpg",
+                            "width": "",
+                            "height": "120",
+                            "class": "product-descriptions__galery-img",
+                            "alt": ""
+                        }'>
+            </include>
+        </div>
+    </section>
+    <section class="product-descriptions__faq">
+        <h2 class="product-descriptions__title">Вопрос — Ответ</h2>
 
         <ul class="faq">
         <li class="faq__item">
@@ -109,6 +111,165 @@
         </li>
 
     </ul>
-    </div>
+    </section>
+    <section class="product-descriptions__testimonials testimonials">
+        <h2 class="product-descriptions__title testimonials__title">
+            <span>Комментарии</span><span class="testimonials__amount">5&nbsp;Комментариeв</span>
+        </h2>
+
+        <div class="testimonials__btn-group">
+            <button type="submit" class="testimonials__btn btn btn-main">Добавить комментарий</button>
+            <button type="submit" class="testimonials__btn btn btn-main-outline">Добавить оценку</button>
+        </div>
+        <form action="" class="testimonials__form">
+<!--            <div class="testimonials__subscribe">-->
+                <input type="checkbox" name="subscribe" id="subscribe" class="visually-hidden">
+                <label for="subscribe" class="testimonials__subscribe-label">Получать уведомления о новых
+                    комментариях к этому товару</label>
+<!--            </div>-->
+            <div class="testimonials__fieldgroup d-none">
+                <input type="tel" name="phone" class="testimonials__phone" placeholder="Номер телефона"/>
+
+                <select name="contacts" class="testimonials__contacts js-select2">
+                    <option value="Vkontakte">Vkontakte</option>
+                    <option value="Viber">Viber</option>
+                    <option value="WhatsAPP">WhatsAPP</option>
+                    <option value="Telegramm">Telegramm</option>
+                </select>
+                <button type="submit" class="testimonials__submit btn btn-main">Получать</button>
+            </div>
+        </form>
+
+        <ul class="testimonials__list">
+            <li class="testimonials__item">
+                <div class="testimonials__photo">
+                    <include src="source/inc/utils/picture.html"
+                             locals='{
+                        "name": "testimonials",
+                        "ext": "jpg",
+                        "width": "73",
+                        "height": "73",
+                        "class": "testimonials__img",
+                        "alt": ""
+                        }'>
+                    </include>
+                </div>
+                <div class="testimonials__block">
+                    <p class="testimonials__header">
+                        <span class="testimonials__author">Александр Филиппов</span>
+                        <span class="testimonials__date">5 дней назад</span>
+                    </p>
+                    <p class="testimonials__text">
+                        Тут сам комментарий, может быть
+                        много всего написанно, а так же могут
+                        быть ссылки - но комментарии проход
+                        не было спама)
+                    </p>
+                    <div class="testimonials__footer">
+                        <button type="button" class="testimonials__txt-btn" disabled="true">0 Комментарий</button>
+                        <button type="button" class="testimonials__txt-btn">Ответить</button>
+                    </div>
+                </div>
+            </li>
+            <li class="testimonials__item">
+                <div class="testimonials__photo">
+                    <include src="source/inc/utils/picture.html"
+                             locals='{
+                        "name": "testimonials",
+                        "ext": "jpg",
+                        "width": "73",
+                        "height": "73",
+                        "class": "testimonials__img",
+                        "alt": ""
+                        }'>
+                    </include>
+                </div>
+                <div class="testimonials__block">
+                    <p class="testimonials__header">
+                        <span class="testimonials__author">Александр Филиппов</span>
+                        <span class="testimonials__date">5 дней назад</span>
+                    </p>
+                    <p class="testimonials__text">
+                        Тут сам комментарий, может быть
+                        много всего написанно, а так же могут
+                        быть ссылки - но комментарии проход
+                        не было спама)
+                    </p>
+                    <div class="testimonials__footer">
+                        <button type="button" class="testimonials__txt-btn" disabled="true">0 Комментарий</button>
+                        <button type="button" class="testimonials__txt-btn">Ответить</button>
+                    </div>
+                </div>
+
+                <ul class="testimonials__list testimonials__list--sublist">
+                    <li class="testimonials__item testimonials__item--subitem">
+                        <div class="testimonials__photo">
+                            <include src="source/inc/utils/picture.html"
+                                     locals='{
+                        "name": "testimonials",
+                        "ext": "jpg",
+                        "width": "73",
+                        "height": "73",
+                        "class": "testimonials__img",
+                        "alt": ""
+                        }'>
+                            </include>
+                        </div>
+                        <div class="testimonials__block">
+                            <p class="testimonials__header">
+                                <span class="testimonials__author">Александр Филиппов</span>
+                                <span class="testimonials__date">5 дней назад</span>
+                            </p>
+                            <p class="testimonials__text">
+                                Тут сам комментарий, может быть
+                                много всего написанно, а так же могут
+                                быть ссылки - но комментарии проход
+                                не было спама)
+                            </p>
+                            <div class="testimonials__footer">
+                                <button type="button" class="testimonials__txt-btn" disabled="true">0 Комментарий</button>
+                                <button type="button" class="testimonials__txt-btn">Ответить</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="product-page__navigation pagination">
+
+            <a class="pagination__arrow pagination__arrow--prev" aria-label="prev">
+                <!--          todo: нерабочая кнопка просото без атрибута хреф-->
+                <span class="visually-hidden">Предыдущая страница</span>
+            </a>
+
+            <ul class="pagination__list">
+                <li class="pagination__item">
+                    <a class="pagination__link active" aria-label="страница 1">1 </a>
+                    <!--             todo: нерабочая кнопка просото без атрибута хреф-->
+
+                </li>
+                <li class="pagination__item">
+                    <a href="#!" class="pagination__link" aria-label="страница 2">2 </a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#!" class="pagination__link" aria-label="страница 3">3 </a>
+                </li>
+                <li class="pagination__item">
+            <span class="pagination__link">
+              ...
+            </span>
+                </li>
+                <li class="pagination__item">
+                    <a href="#!" class="pagination__link" aria-label="страница 9">10 </a>
+                </li>
+            </ul>
+
+            <a href="#!" class="pagination__arrow pagination__arrow--next" aria-label="next">
+                <span class="visually-hidden">Следующая страница</span>
+            </a>
+
+        </div>
+    </section>
 
 </div>
