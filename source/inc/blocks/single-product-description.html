@@ -119,15 +119,14 @@
 
         <div class="testimonials__btn-group">
             <button type="submit" class="testimonials__btn btn btn-main">Добавить комментарий</button>
-            <button type="submit" class="testimonials__btn btn btn-main-outline">Добавить оценку</button>
+            <button type="submit" class="testimonials__btn btn btn-main-outline" disabled>Добавить оценку</button>
         </div>
         <form action="" class="testimonials__form">
-<!--            <div class="testimonials__subscribe">-->
-                <input type="checkbox" name="subscribe" id="subscribe" class="visually-hidden">
-                <label for="subscribe" class="testimonials__subscribe-label">Получать уведомления о новых
-                    комментариях к этому товару</label>
-<!--            </div>-->
-            <div class="testimonials__fieldgroup d-none">
+            <input type="checkbox" name="subscribe" id="subscribe" class="visually-hidden ">
+            <label for="subscribe" class="testimonials__subscribe-label">
+                Получать уведомления о новых комментариях к этому товару
+            </label>
+            <div class="testimonials__fieldgroup">
                 <input type="tel" name="phone" class="testimonials__phone" placeholder="Номер телефона"/>
 
                 <select name="contacts" class="testimonials__contacts js-select2">
@@ -166,8 +165,8 @@
                         не было спама)
                     </p>
                     <div class="testimonials__footer">
-                        <button type="button" class="testimonials__txt-btn" disabled="true">0 Комментарий</button>
-                        <button type="button" class="testimonials__txt-btn">Ответить</button>
+                        <button type="button" class="testimonials__txt-btn btn-link" disabled>0 Комментарий</button>
+                        <button type="button" class="testimonials__txt-btn btn-link">Ответить</button>
                     </div>
                 </div>
             </li>
@@ -196,12 +195,11 @@
                         не было спама)
                     </p>
                     <div class="testimonials__footer">
-                        <button type="button" class="testimonials__txt-btn" disabled="true">0 Комментарий</button>
-                        <button type="button" class="testimonials__txt-btn">Ответить</button>
+                        <button type="button" class="testimonials__txt-btn testimonials__txt-btn--has-comment btn-link js-has-comment">1 Комментарий</button>
+                        <button type="button" class="testimonials__txt-btn btn-link js-test">Ответить</button>
                     </div>
                 </div>
-
-                <ul class="testimonials__list testimonials__list--sublist">
+                <ul class="testimonials__list testimonials__list--sublist js-sublist">
                     <li class="testimonials__item testimonials__item--subitem">
                         <div class="testimonials__photo">
                             <include src="source/inc/utils/picture.html"
@@ -218,7 +216,7 @@
                         <div class="testimonials__block">
                             <p class="testimonials__header">
                                 <span class="testimonials__author">Александр Филиппов</span>
-                                <span class="testimonials__date">5 дней назад</span>
+
                             </p>
                             <p class="testimonials__text">
                                 Тут сам комментарий, может быть
@@ -227,12 +225,41 @@
                                 не было спама)
                             </p>
                             <div class="testimonials__footer">
-                                <button type="button" class="testimonials__txt-btn" disabled="true">0 Комментарий</button>
-                                <button type="button" class="testimonials__txt-btn">Ответить</button>
+                                <button type="button" class="testimonials__txt-btn btn-link">Ответить</button>
                             </div>
                         </div>
                     </li>
                 </ul>
+            </li>
+            <li class="testimonials__item">
+                <div class="testimonials__photo">
+                    <include src="source/inc/utils/picture.html"
+                             locals='{
+                        "name": "testimonials",
+                        "ext": "jpg",
+                        "width": "73",
+                        "height": "73",
+                        "class": "testimonials__img",
+                        "alt": ""
+                        }'>
+                    </include>
+                </div>
+                <div class="testimonials__block">
+                    <p class="testimonials__header">
+                        <span class="testimonials__author">Александр Филиппов</span>
+                        <span class="testimonials__date">5 дней назад</span>
+                    </p>
+                    <p class="testimonials__text">
+                        Тут сам комментарий, может быть
+                        много всего написанно, а так же могут
+                        быть ссылки - но комментарии проход
+                        не было спама)
+                    </p>
+                    <div class="testimonials__footer">
+                        <button type="button" class="testimonials__txt-btn btn-link" disabled>0 Комментарий</button>
+                        <button type="button" class="testimonials__txt-btn btn-link">Ответить</button>
+                    </div>
+                </div>
             </li>
         </ul>
 

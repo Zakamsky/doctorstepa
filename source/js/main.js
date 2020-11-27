@@ -369,7 +369,14 @@ jQuery( document ).ready(function( $ ) {
         });
     }
 
+    //кнопки скрыть показать комментарии в кооментриях к товару
+    $(".js-has-comment").click(function () {
+        console.log('click')
+        let $button = $(this);
 
+        $button.closest(".testimonials__item").toggleClass("open")
+
+    });
 
 
     //блок ссылок на субкатегории в каталоге

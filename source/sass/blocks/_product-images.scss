@@ -27,13 +27,21 @@
     }
   }
   &__single-img{
-    display: block;
     margin: 0 auto;
+    border-radius: $radius-lg;
+  }
+  &__nav-img{
+    border-radius: $radius-sm;
   }
   &__single-img,
   &__nav-img{
+    display: block;
     max-width: 100%;
     height: auto;
+    @include transition;
+    &:hover{
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
   }
   &__nav-slider{
     grid-template-rows: auto auto auto;

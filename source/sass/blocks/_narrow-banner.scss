@@ -1,10 +1,23 @@
 .narrow-banner{
+  display: block;
   height: 100%;
   padding: 70px 28px;
   border-radius: $radius-xl;
   background-color: $color-background-light;
   background-image: url('../img/narrow-banner.svg');
   background-size: 100%;
+  @include transition-my;
+  &:focus{
+    outline: 0;
+    box-shadow: 0 0 0 4px  rgba($color-accent, 0.25);
+  }
+  &:hover{
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+  &:active{
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  }
   &__text{
     margin-bottom: 11px;
     font-weight: bold;
@@ -12,11 +25,14 @@
     line-height: 1.15;
     text-align: center;
     color: $color-accent;
+    text-decoration: none;
+
   }
   &__price{
     font-weight: bold;
     font-size: 26px;
     text-align: center;
     color: $color-text;
+    text-decoration: none;
   }
 }
