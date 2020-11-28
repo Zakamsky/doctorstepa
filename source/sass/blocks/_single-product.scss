@@ -3,7 +3,6 @@ $gap: 30px;
 .single-product{
   &__grid-wrapper{
     display: grid;
-
     grid-gap: $gap;
     @include media(lg){
       grid-template-columns: repeat( 2, calc((100% - #{$gap}) / 2) );
@@ -16,16 +15,9 @@ $gap: 30px;
     grid-column: 1 / 2;
   }
   &__action-block{
-    //padding: 16px;
     @include media(lg){
       grid-column: 2 / -1;
       grid-row: 1 / -1;
-      //todo: kostyl
     }
   }
-
 }
-
-
-
-.product-actions{}
