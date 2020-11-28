@@ -8,6 +8,7 @@ $gap: 30px;
     @include media(lg){
       grid-template-columns: repeat( 2, calc((100% - #{$gap}) / 2) );
       grid-template-rows: auto 1fr;
+      padding-top: 23px;
     }
   }
   &__image-block,

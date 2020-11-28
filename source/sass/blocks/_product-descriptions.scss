@@ -7,6 +7,10 @@
     font-size: 20px;
     line-height: 1.25;
     border-bottom: 1px solid $color-text-light;
+    @include media(lg){
+      font-size: 38px;
+      margin-bottom: 2.5rem;
+    }
   }
   &__subtitle{
     margin-top: 2rem;
@@ -16,12 +20,22 @@
     font-size: 16px;
     line-height: 20px;
     border-bottom: 1px solid $color-text-light;
+    @include media(lg){
+      margin-top: 2.5em;
+      margin-bottom: 2.2em;
+      padding-bottom: 1.75rem;
+      font-size: 18px;
+      line-height: 1.22;
+
+    }
+
   }
   &__text{
     font-weight: 500;
     font-size: 12px;
-    //line-height: 18px;
-    /* or 150% */
+    @include media(lg){
+      font-size: 14px;
+    }
   }
   &__galery{
     display: flex;
@@ -64,6 +78,10 @@
     border-bottom: 1px solid $color-text-light;
     margin-bottom: 1.4rem;
     padding-bottom: 10px;
+    @include media(lg){
+      margin-bottom: 2rem;
+    }
+
   }
   &__question{
     position: relative;
@@ -78,6 +96,11 @@
     line-height: 20px;
     text-align: left;
     background: none;
+    @include media(lg){
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 17px;
+    }
     &::after{
       content: "";
       background: url("../img/footer-arrow-right.svg") no-repeat center;
@@ -104,6 +127,11 @@
     line-height: 18px;
     overflow: hidden;
     @include transition-my;
+    @include media(lg){
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
   &__question.open + &__answer{
     max-height: 100px;
@@ -124,6 +152,9 @@
     font-weight: 500;
     font-size: 12px;
     color: $color-text-light;
+    @include media(lg){
+      font-size: 18px;
+    }
   }
   &__btn-group{
     display: flex;
@@ -132,12 +163,28 @@
   }
   &__btn{
     padding: 16px 12px;
-    width: 154px;
+    min-width: 154px;
     font-weight: 500;
     font-size: 10px;
+    @include media(lg){
+      //min-width: 278px;
+      padding: 19px 22px;
+      font-size: 14px;
+    }
+    @include media(xl){
+      min-width: 278px;
+      border-radius: 30px;
+      &::before{
+        content: '+ ';
+      }
+    }
   }
   &__form{
     margin-top: 14px;
+    @include media(lg){
+      margin-top: 18px;
+    }
+
   }
   &__subscribe-label{
     position: relative;
@@ -147,6 +194,11 @@
     font-size: 12px;
     line-height: 1.25;
     background-color: $color-accent-light;
+    @include media(lg){
+      padding-bottom: 16px;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
   [type="checkbox"] + .testimonials__subscribe-label::before {
     content: '';
@@ -184,11 +236,24 @@
     height: 0;
     overflow: hidden;
     @include transition-my;
+    @include media(xl){
+      flex-direction: row;
+      justify-content: space-between;
+      & > :not(.select2-hidden-accessible){
+        margin: 0;
+        width: 175px !important;
+        height: 44px;
+        line-height: 1;
+      }
+    }
   }
   [type="checkbox"]:checked ~ &__fieldgroup{
     display: flex;
     height: 195px;
     padding-top: 12px;
+    @include media(xl){
+      height: 70px;
+    }
   }
   &__phone{
     height: auto;
@@ -206,7 +271,7 @@
   &   .select2-selection--single{
     padding: 14px 30px 14px 15px;
     @include media(lg){
-      padding: 11px 30px 11px 15px;
+      padding: 13.5px 30px;
     }
   }
   &__submit{
@@ -218,10 +283,16 @@
     list-style: none;
     padding-top: 20px;
     padding-left: 0;
+    @include media(lg){
+      padding-top: 44px;
+    }
     &--sublist{
       width: 100%;
       padding-top: 13px;
       padding-left: 70px;
+      @include media(lg){
+        padding-left: 104px;
+      }
     }
   }
   &__item{
@@ -241,19 +312,36 @@
     padding-top: 4px;
     .testimonials__item--subitem &{
       flex: 0 0 55px;
+      @include media(lg){
+        flex: 0 0 65px;
+      }
+    }
+    @include media(lg){
+      flex: 0 0 104px;
     }
   }
-  &__block{
-    flex: 1 0 calc(100% - 70px);
-    .testimonials__item--subitem &{
-      flex: 1 1 calc(100% - 55px);
-    }
-  }
+
   &__img{
     width: 60px;
     height: auto;
+    @include media(lg){
+      width: 73px;
+    }
     .testimonials__item--subitem &{
       width: 50px;
+    }
+
+  }
+  &__block{
+    flex: 1 0 calc(100% - 70px);
+    @include media(lg){
+      flex: 0 0 calc(100% - 104px);
+    }
+    .testimonials__item--subitem &{
+      flex: 1 1 calc(100% - 55px);
+      @include media(lg){
+        flex: 0 0 calc(100% - 65px);
+      }
     }
   }
   &__header{
@@ -261,22 +349,39 @@
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 4px;
+    @include media(lg){
+      margin-bottom: 1.3rem;
+    }
   }
   &__author{
     font-weight: 500;
+    @include media(lg){
+      font-size: 18px;
+      line-height: 1.22;
+    }
   }
   &__date{
     font-weight: 500;
     font-size: 10px;
     color: $color-text-light;
+    @include media(lg){
+      font-size: 14px;
+    }
+
   }
   &__text{
     font-weight: 500;
     font-size: 12px;
     line-height: 1.33;
+    @include media(lg){
+      font-size: 14px;
+    }
     .testimonials__item--subitem &{
       font-size: 10px;
       line-height: 1.4;
+      @include media(lg){
+        font-size: 14px;
+      }
     }
   }
   &__footer{
@@ -288,6 +393,9 @@
     font-weight: 500;
     font-size: 10px;
     color: $color-text-light;
+    @include media(lg){
+      font-size: 14px;
+    }
     &--has-comment{
       padding-right: 16px;
       position: relative;
@@ -310,7 +418,7 @@
   }
 
   //todo: перекулбючение видимотси вложенных коментов
-  //todo: что бы показывать комменты сразу - надо просто добавить элементу юtestimonials__item в котором комментарии класс .open
+  //todo: что бы показывать комменты сразу - надо просто добавить элементу .testimonials__item в котором комментарии класс .open
   .testimonials__list--sublist{
     display: none;
   }

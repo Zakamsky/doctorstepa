@@ -151,7 +151,7 @@
       padding-bottom: 0;
     }
     @include media(lg){
-      padding: 0 38px 0 0;
+      padding: 0 76px 0 0;
     }
     .banner__content{
       padding: 0 ;
@@ -162,7 +162,7 @@
         text-align: left;
       }
       @include media(lg){
-        padding: 106px 0 20px 40px;
+        padding: 106px 0 20px 81px;
       }
     }
     .banner__title{
@@ -172,6 +172,10 @@
     }
     .banner__subtitle{
       font-weight: 700;
+      @include media(lg){
+        font-size: 18px;
+        line-height: 22px;
+      }
     }
     .banner__text{
       display: block;
@@ -186,6 +190,7 @@
       margin-bottom: 37px;
       @include media(lg){
         margin-top: 0;
+        min-width: 193px;
       }
     }
     .socials{
